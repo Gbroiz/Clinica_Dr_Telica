@@ -89,7 +89,7 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 95px;
-    background-image: url(../img/Fondo\ contenedor\ principal\ \(7\).png);
+    background-image: url(../img/Fondo-contenedor-principal.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,6 +104,7 @@ nav ul li a:hover {
     /* Sombra alrededor de la tarjeta */
     transition: transform 0.2s;
     margin-right: 30px;
+    object-fit: cover;
 }
 
 .contenedor-principal-texto h2 {
@@ -259,21 +260,8 @@ nav ul li a:hover {
 /*Equipo médico*/
 
 .contenedor-equipo {
-    text-align: left;
     padding: 40px;
     background-color: white;
-}
-
-.contenedor-equipo-cards{
-    display: flex;
-    justify-content: center;
-    /* Centrar tarjetas horizontalmente */
-    flex-wrap: wrap;
-    /* Permitir que las tarjetas se ajusten en múltiples líneas */
-    gap: 60px;
-    /* Espacio entre tarjetas */
-    padding: 20px;
-    /* Espacio alrededor del contenedor */
 }
 
 .contenedor-equipo h3 {
@@ -288,10 +276,46 @@ nav ul li a:hover {
     margin: 25px auto;
 }
 
-.cardEquipo {
-
+.contenedor-equipo-cards {
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
+.contenedor-equipo-cards h5 {
+    text-align: center;  /* Alinea el título al centro */
+    font-size: 16px;
+    font-weight: bold;
+    color: #264A80;
+}
+
+.contenedor-equipo-cards p {
+    margin-top: 5px;  /* Reduce el margen superior del párrafo */
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;  /* Alinea el texto descriptivo al centro */
+}
+
+.cardEquipo {
+    border: none !important;
+    transition: transform 0.2s;
+    width: 180px;  /* Ancho de las tarjetas */
+    text-align: center;  /* Alineación del contenido de la tarjeta */
+}
+
+.cardEquipo:hover {
+    transform: translateY(-5px);  /* Efecto de levantamiento al hacer hover */
+}
+
+.cardEquipo .card-img-top {
+    border-radius: 5%;  /* Forma de la imagen */
+    width: 150px;   /* Ancho fijo de la imagen */
+    height: 150px;  /* Alto fijo de la imagen */
+    object-fit: cover;  /* Recorta la imagen manteniendo la proporción y sin deformarla */
+    margin: 0 auto 5px;  /* Centra la imagen dentro de la tarjeta */
+    display: block;
+}
 
 /*Footer*/
 
