@@ -42,7 +42,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 nav ul li {
@@ -53,7 +53,7 @@ nav ul li a {
     position: relative;
     /* Necesario para el pseudo-elemento ::after */
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     color: #0C1728;
     transition: color 0.3s ease;
     font-weight: 500;
@@ -321,16 +321,17 @@ nav ul li a:hover {
 
 .div-footer {
     background-color: #7798C2;
-    padding: 20px;
+    padding: 15px; /* Reducir el padding */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color:#FFFFFF;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
 }
 
 .div-footer h3{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px; /* Reducir el tamaño del título */
 }
 
 .div-footer ul{
@@ -339,26 +340,26 @@ nav ul li a:hover {
 }
 
 .div-footer ul li {
-    margin-bottom: 5px; /* Adjust the value as needed */
+    margin-bottom: 3px; /* Ajustar el margen inferior */
 }
 
 .div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 40px;
+    width: 30px; /* Reducir la longitud de la línea */
 }
 
 .footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 40px;
-    width: 40px;
-    margin: 0 10px 10px 0;
-    line-height: 40px;
+    height: 30px; /* Reducir el tamaño de los íconos */
+    width: 30px; /* Reducir el tamaño de los íconos */
+    margin: 0 7px 7px 0; /* Ajustar el margen */
+    line-height: 30px; /* Ajustar la alineación de texto */
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
     transition: all 0.5s ease;
 }
 
