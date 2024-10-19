@@ -82,11 +82,194 @@ nav ul li a:hover {
     /* Cambia el color del texto al hacer hover */
 }
 
+/*Inicio*/
+
+.contenedor-inicio {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
+    padding-bottom: 60px;
+}
+
+.img-conocenos {
+    height: 80px; 
+    width: auto; 
+    margin-top: 10px; 
+}
+
+.contenedor-inicio h1 {
+    font-size: 30px; 
+    color: #264A80; 
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-inicio hr {
+    border: 1px solid #D1B74D; 
+    opacity: 1; 
+    width: 7%; 
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.contenedor-inicio-texto {
+    font-weight: 300; 
+    max-width: 130vh;
+    /* Puedes ajustar este valor */
+    margin: 0 auto;
+    /* Centra el contenido */
+}
+
+/*Sección reseña histórica*/
+
+.contenedor-reseña-historica {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 0;
+    background-color: #ECF4F9;
+}
+
+.contenedor-reseña-historica hr {
+    border: 1px solid #D1B74D; 
+    opacity: 1; 
+    width: 7%; 
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.contenedor-reseña-historica h2{
+    font-weight: 600;
+    padding-bottom: 1.5%;
+    font-size: 27px;
+}
+
+.contenedor-reseña-historica p{
+    font-weight: 300;
+}
+
+.contenedor-reseña-historica-imagen {
+    background: no-repeat;
+    background-size: cover;
+    height: 335px;
+    border-radius: 12px;
+    margin-left: 85px; 
+}
+
+.contenedor-texto{
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 6rem; /* Añade un poco de espacio alrededor del texto */
+}
+
+/*Sección de Misión y Valores*/
+
+.contenedor-mision-vision{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-bottom: 0;
+    background-color: #FFFFFF;
+}
+
+.contenedor-mision-vision h2{
+    font-weight: 600;
+    padding-bottom: 1.5%;
+    font-size: 27px;
+}
+
+.contenedor-mision-vision p{
+    font-weight: 300;
+}
+
+.contenedor-mision-vision-imagen {
+    background: no-repeat;
+    background-size: cover;
+    height: 335px;
+    border-radius: 12px;
+    margin-right: 85px; 
+}
+
+/* Sección de Valores */
+
+.contenedor-valores {
+    background-color: #ECF4F9; 
+    padding: 100px;
+    text-align: center; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 120px;
+}
+
+.contenedor-valores h2 {
+    font-size: 28px; 
+    color: #264A80; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.contenedor-valores hr {
+    border: 1px solid #D1B74D;
+    width: 7%;
+    margin: 0 auto 20px;
+    opacity: 1;
+}
+
+.contenedor-valores p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0C1728;
+    max-width: 700px; 
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.valores-lista {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.valor-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición suave */
+}
+
+.valor-item:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del item al 105% */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Opcional: aumentar sombra al hacer hover */
+}
+
+.valor-item h3 {
+    font-size: 18px;
+    color: #264A80;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.valor-item p {
+    font-size: 14px;
+    color: #0C1728;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
 /*Footer*/
 
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px; 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

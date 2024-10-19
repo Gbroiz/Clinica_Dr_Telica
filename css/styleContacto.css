@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #ECF4F9;
+    background-color: #ffffff;
 }
 
 /*Encabezado - Nav*/
@@ -80,6 +80,27 @@ nav ul li a.activo::after {
 nav ul li a:hover {
     color: #264A80;
     /* Cambia el color del texto al hacer hover */
+}
+
+/*Inicio*/
+
+.contenedor-contacto h1 {
+    font-size: 30px; 
+    color: #264A80; 
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-contacto hr {
+    border: 1px solid #D1B74D; 
+    opacity: 1; 
+    width: 7%; 
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.contenedor-contacto {
+    font-weight: 300;
 }
 
 /*Footer*/

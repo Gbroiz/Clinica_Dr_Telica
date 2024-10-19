@@ -84,7 +84,7 @@ nav ul li a:hover {
 
 /*Sección principal*/
 
-.contenedor-principal{
+.contenedor-principal {
     position: relative;
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
@@ -98,84 +98,134 @@ nav ul li a:hover {
 }
 
 .contenedor-principal-texto {
-    max-width: 110vh; /* Puedes ajustar este valor */
-    margin: 0 auto; /* Centra el contenido */
+    max-width: 110vh;
+    /* Puedes ajustar este valor */
+    margin: 0 auto;
+    /* Centra el contenido */
 }
 
-.contenedor-principal h2{
+.contenedor-principal h2 {
     font-weight: bold;
 }
 
-.contenedor-principal p{
+.contenedor-principal p {
     margin-top: 20px;
     font-weight: 300;
 }
 
 /*Sección categorías*/
 
-.contenedor-categorias {
+.contenedor-categorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
     
 }
 
-.contenedor-categorias h2{
-    font-size: 30px;
-    color: #264A80;
+.contenedor-categorias h3 {
+    font-size: 25px;
+    color: #0C1728;
     margin: 10px;
+    font-weight: bold;
 }
 
-.contenedor-categorias hr{
-    border: 1px solid #D1B74D;
+.contenedor-categorias hr {
+    border: 1px solid #D1B74D ;
     opacity: 1;
-    width: 10%;
+    width: 5%;
+    margin-top: 2px;
+    margin-bottom: 30px;
+}
+
+.card-categorias {
+    cursor: pointer !important;
+    transition: transform 0.3s ease !important;
+    border: none !important;
+    border-radius: 15px;
+}
+
+.card-categorias h5{
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.card-categorias:hover {
+    transform: scale(1.04);
+}
+
+.card-categorias img {
+    height: 150px; /* Reducir el tamaño de la imagen */
+    width: 100%;
+    border-radius: 15px;
+    filter: brightness(0.7); 
+}
+
+.card-body-categorias {
+    position: absolute;
+    bottom: 0px; /* Ajusta la distancia desde la parte inferior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    z-index: 2; /* Asegura que el texto esté sobre la imagen */
 }
 
 /*Footer*/
 
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px;
+    /* Reducir el padding */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    /* Reducir el tamaño de la fuente general */
 }
 
-.div-footer h3{
+.div-footer h3 {
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px;
+    /* Reducir el tamaño del título */
 }
 
-.div-footer ul{
+.div-footer ul {
     list-style-type: none;
     padding: 0;
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px;
+    /* Ajustar el margen inferior */
 }
 
-.div-footer hr{
+.div-footer hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px;
+    /* Reducir la longitud de la línea */
 }
 
-.footer-redes-sociales a{
+.footer-redes-sociales a {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px;
+    /* Reducir el tamaño de los íconos */
+    width: 30px;
+    /* Reducir el tamaño de los íconos */
+    margin: 0 7px 7px 0;
+    /* Ajustar el margen */
+    line-height: 30px;
+    /* Ajustar la alineación de texto */
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem;
+    /* Reducir el tamaño de la fuente de los íconos */
     transition: all 0.5s ease;
 }
 
-.footer-redes-sociales a:hover{
+.footer-redes-sociales a:hover {
     color: #000;
     background-color: #fff;
 }
