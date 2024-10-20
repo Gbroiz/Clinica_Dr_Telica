@@ -40,12 +40,93 @@
         </nav>
     </header>
     <section class="contenedor-contacto">
-        <h1>Conéctate con Nosotros</h1>
+        <img class = "img-contactenos" src="img/Contactenos.png" alt="Icono sobre contacto">
+        <h1>Contáctenos</h1>
         <hr>
         <p>Nos dedicamos a brindar atención a nuestros pacientes y a la comunidad. Estamos disponibles para atender tus
             preguntas e inquietudes, así como para ofrecerte el apoyo que necesites. No dudes en contactarnos para
             obtener información sobre nuestros servicios, programar una cita o compartir tus comentarios. Tu salud y
-            bienestar son nuestra prioridad.</p>
+            bienestar son nuestra prioridad.
+        </p>
+        <div class="contenedor-contacto-info">
+            <div class="box-contacto">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <div class="texto-contacto">
+                    <h3>Sedes</h3>
+                    <p>Heredia, Sarapiquí, Puerto Viejo, frente al BCR</p>
+                    <p>Heredia, Sarapiquí, La Virgen, frente a la Escuela Claudio Lara Campos</p>
+                </div>
+            </div>
+
+            <div class="box-contacto">
+                <i class="fa-solid fa-envelope icon"></i>
+                <div class="texto-contacto">
+                    <h3>Correo electrónico</h3>
+                    <p>clinicadrtelica@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="box-contacto">
+                <i class="fa-solid fa-phone icon"></i>
+                <div class="texto-contacto">
+                    <h3>Teléfono</h3>
+                    <p>+506 2201 6673</p>
+                    <p>+506 6357 8903</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-formulario">
+            <form>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="mb-4">
+                            <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control form-control-sm" id="nombreCompleto" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-sm" id="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="telefono" class="form-label">Teléfono (+506)</label>
+                            <input type="text" class="form-control form-control-sm" id="telefono" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control form-control-sm" id="fechaNacimiento" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="mb-4">
+                            <label class="form-label">Género</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input rdb-genero" type="radio" name="genero" id="masculino"
+                                        value="masculino" checked>
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input rdb-genero" type="radio" name="genero" id="femenino"
+                                        value="femenino">
+                                    <label class="form-check-label" for="femenino">Femenino</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="form-label">Escribe tu Mensaje...</label>
+                            <textarea class="form-control form-control-sm" id="mensaje" rows="5" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center mt-3">
+                        <button type="submit" class="btn btn-primary button btn-enviar">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
     <footer>
         <div class="div-footer">

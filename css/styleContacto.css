@@ -84,10 +84,22 @@ nav ul li a:hover {
 
 /*Inicio*/
 
+.contenedor-contacto {
+    padding: 55px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.img-contactenos{
+    height: 80px; 
+    width: auto; 
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+
 .contenedor-contacto h1 {
     font-size: 30px; 
     color: #264A80; 
-    margin: 10px;
     font-weight: bold;
 }
 
@@ -95,12 +107,79 @@ nav ul li a:hover {
     border: 1px solid #D1B74D; 
     opacity: 1; 
     width: 7%; 
-    margin-top: 5px;
-    margin-bottom: 30px;
 }
 
-.contenedor-contacto {
+.contenedor-contacto p{
     font-weight: 300;
+    width: 100vh;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+/*Información de contacto*/
+
+.box-contacto {
+    display: flex; /* Flexbox para alinear horizontalmente el icono y el texto */
+    align-items: flex-start; /* Alinea los ítems al inicio para que no se centren verticalmente */
+    margin-bottom: 40px; /* Espacio más notable entre cada box */
+}
+
+.icon {
+    background-color: #ECF4F9; /* Color de fondo del círculo */
+    border-radius: 50%; /* Crea un círculo perfecto */
+    width: 40px; /* Ancho fijo para asegurar un círculo */
+    height: 40px; /* Alto fijo igual al ancho para un círculo perfecto */
+    display: flex; /* Para alinear el icono dentro del círculo */
+    align-items: center; /* Centrar el icono verticalmente */
+    justify-content: center; /* Centrar el icono horizontalmente */
+    margin-right: 15px; /* Espacio entre el icono y el texto */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    font-size: 1.2em; /* Tamaño del icono */
+}
+
+.icon:hover {
+    background-color: #7798C2; /* Cambia el color al hacer hover */
+    color: white; /* Cambia el color del icono al hacer hover */
+}
+
+.texto-contacto h3 {
+    margin: 0; /* Elimina el margen del encabezado */
+    font-size: 1em; /* Tamaño más pequeño para el título */
+}
+
+.texto-contacto p {
+    margin: 0; /* Elimina el margen de los párrafos */
+    font-size: 0.9em; /* Tamaño más pequeño para los párrafos */
+}
+
+/*Estilos del formulario*/
+
+form {
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del formulario */
+    padding: 20px; /* Opcional: Añadir un relleno para separar el contenido del borde */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    background-color: #ECF4F9; /* Asegura un fondo claro para el formulario */
+}
+
+.rdb-genero:checked {
+    background-color: #7798C2;
+    border-color: #7798C2;
+}
+
+.btn-enviar {
+    background-color: #D1B74D;
+    border-color: #D1B74D;
+}
+
+.btn-enviar:hover {
+    background-color: #7798C2;
+    border-color: #7798C2;
+}
+
+.form-control-sm:focus {
+    border-color: #7798C2; 
+    box-shadow: 0 0 5px  #7798C2; 
 }
 
 /*Footer*/

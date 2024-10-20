@@ -82,6 +82,51 @@ nav ul li a:hover {
     /* Cambia el color del texto al hacer hover */
 }
 
+/*Inicio*/
+
+.contenedor-inicio {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
+    padding-bottom: 60px;
+}
+
+.contenedor-inicio h2 {
+    font-size: 30px; 
+    color: #264A80; 
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-inicio hr {
+    border: 1px solid #D1B74D; 
+    opacity: 1; 
+    width: 7%; 
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.contenedor-inicio p{
+    font-weight: 300;
+    width: 120vh;
+}
+
+/*Preguntas y respuestas*/
+
+/* Preguntas y respuestas */
+.contenedor-acordion-preguntas {
+    padding: 50px;
+}
+
+
+/* Estilo para el botón expandido */
+.accordion-button:not(.collapsed) {
+    color: rgb(255, 255, 255); /* Color del texto */
+    background-color:  #7798C2; 
+}
 /*Footer*/
 
 .div-footer {

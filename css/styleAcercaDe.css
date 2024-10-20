@@ -82,6 +82,62 @@ nav ul li a:hover {
     /* Cambia el color del texto al hacer hover */
 }
 
+/* Contenedor de inicio */
+
+.contenedor-informacion-autora {
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
+    padding-bottom: 60px;
+}
+
+.card {
+    transition: transform 0.3s; /* Añadir un efecto de transición */
+    border: none; /* Eliminar borde por defecto */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.contenedor-informacion-autora h2 {
+    font-size: 30px;
+    color: #264A80;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-informacion-autora hr {
+    border: 1px solid #D1B74D;
+    opacity: 1;
+    width: 7%;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 20px; /* Ajustar el padding interno */
+}
+
+.card-text {
+    margin-bottom: 1rem; /* Espacio entre los párrafos */
+}
+
+.btn-contactar {
+    background-color: #D1B74D; /* Color de fondo rojo */
+    color: white; /* Color del texto en blanco */
+    border: none; /* Eliminar borde */
+    padding: 10px 20px; /* Ajustar padding */
+    text-align: center; /* Centrar el texto */
+}
+
+.btn-contactar:hover {
+    background-color: #7798C2; /* Color más oscuro al pasar el mouse */
+    color: white; /* Mantener texto blanco */
+}
+
 /*Footer*/
 
 .div-footer {
