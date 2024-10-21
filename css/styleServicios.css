@@ -82,53 +82,141 @@ nav ul li a:hover {
     /* Cambia el color del texto al hacer hover */
 }
 
+/*Inicio - Carrousel*/
+
+/* Contenedor del carrusel con ancho del 100% */
+.contenedor-carrusel-principal {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Tamaño de las imágenes del carrusel */
+.carrusel-imagen {
+    width: 100%;
+    /* Ancho completo */
+    height: 400px;
+    /* Mantener la altura */
+    object-fit: cover;
+    /* Ajusta las imágenes al tamaño sin distorsión */
+}
+
+/* Centrando el texto sobre las imágenes del carrusel */
+.carrusel-texto {
+    position: absolute;
+    top: 50%;
+    /* Centra el texto verticalmente */
+    left: 50%;
+    /* Centra el texto horizontalmente */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+/* Texto del título del carrusel */
+.carrusel-titulo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Texto de descripción del carrusel */
+.carrusel-descripcion {
+    font-size: 16px;
+}
+
+/* Contenedor con servicios */
+
+.tarjeta {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ajusta el ancho de la tarjeta */
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.icono {
+    width: 55px;
+    /* Aumenta el tamaño del ícono */
+    margin-bottom: 15px;
+}
+
+.contenido {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Ajuste solo de las imágenes principales para que sean del mismo tamaño */
+.tarjeta>img {
+    /* Solo selecciona las imágenes directas dentro de las tarjetas, excluyendo los íconos */
+    width: 100%;
+    /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px;
+    /* Fija una altura común para todas las imágenes */
+    object-fit: cover;
+    /* Ajusta la imagen, recortándola si es necesario para mantener las proporciones */
+}
+
 /*Footer*/
 
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px;
+    /* Reducir el padding */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    /* Reducir el tamaño de la fuente general */
 }
 
-.div-footer h3{
+.div-footer h3 {
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px;
+    /* Reducir el tamaño del título */
 }
 
-.div-footer ul{
+.div-footer ul {
     list-style-type: none;
     padding: 0;
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px;
+    /* Ajustar el margen inferior */
 }
 
-.div-footer hr{
+.div-footer hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px;
+    /* Reducir la longitud de la línea */
 }
 
-.footer-redes-sociales a{
+.footer-redes-sociales a {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px;
+    /* Reducir el tamaño de los íconos */
+    width: 30px;
+    /* Reducir el tamaño de los íconos */
+    margin: 0 7px 7px 0;
+    /* Ajustar el margen */
+    line-height: 30px;
+    /* Ajustar la alineación de texto */
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem;
+    /* Reducir el tamaño de la fuente de los íconos */
     transition: all 0.5s ease;
 }
 
-.footer-redes-sociales a:hover{
+.footer-redes-sociales a:hover {
     color: #000;
     background-color: #fff;
 }
