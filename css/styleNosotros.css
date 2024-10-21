@@ -205,10 +205,10 @@ nav ul li a:hover {
 }
 
 .contenedor-valores h2 {
-    font-size: 28px; 
+    font-size: 27px; 
     color: #0C1728; 
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 

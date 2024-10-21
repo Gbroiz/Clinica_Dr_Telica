@@ -159,6 +159,13 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
+/*Video*/
+
+.video{
+    width: 560px;
+    margin: 4em auto;
+}
+
 /*Footer*/
 
 .div-footer {
