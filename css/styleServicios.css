@@ -131,7 +131,9 @@ nav ul li a:hover {
     border-radius: 10px;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Ajusta el ancho de la tarjeta */
+    width: 100%;
+    max-width: 350px; /* Tamaño máximo */
+    min-height: 450px; /* Altura mínima fija */
 }
 
 .tarjeta:hover {
@@ -153,11 +155,8 @@ nav ul li a:hover {
 .tarjeta>img {
     /* Solo selecciona las imágenes directas dentro de las tarjetas, excluyendo los íconos */
     width: 100%;
-    /* Hace que la imagen ocupe todo el ancho de la tarjeta */
     height: 200px;
-    /* Fija una altura común para todas las imágenes */
     object-fit: cover;
-    /* Ajusta la imagen, recortándola si es necesario para mantener las proporciones */
 }
 
 /*Footer*/
