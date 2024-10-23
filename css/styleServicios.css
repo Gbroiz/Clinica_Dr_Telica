@@ -132,8 +132,10 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 350px; /* Tamaño máximo */
-    min-height: 450px; /* Altura mínima fija */
+    max-width: 350px;
+    /* Tamaño máximo */
+    min-height: 450px;
+    /* Altura mínima fija */
 }
 
 .tarjeta:hover {
@@ -161,12 +163,28 @@ nav ul li a:hover {
 
 /*Video*/
 
-.video{
+.video {
     width: 560px;
     margin: 4em auto;
 }
 
 /*Footer*/
+
+.div-footer a {
+    color: inherit;
+    /* Heredar el color del texto del li */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: inline-block;
+    /* Necesario para aplicar transformaciones */
+    transition: transform 0.3s ease;
+    /* Transición suave para el movimiento */
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
 
 .div-footer {
     background-color: #7798C2;
@@ -177,13 +195,11 @@ nav ul li a:hover {
     flex-wrap: wrap;
     color: #FFFFFF;
     font-size: 0.9rem;
-    /* Reducir el tamaño de la fuente general */
 }
 
 .div-footer h3 {
     font-weight: bold;
     font-size: 18px;
-    /* Reducir el tamaño del título */
 }
 
 .div-footer ul {
@@ -193,32 +209,25 @@ nav ul li a:hover {
 
 .div-footer ul li {
     margin-bottom: 3px;
-    /* Ajustar el margen inferior */
 }
 
 .div-footer hr {
     border: 1px solid #D1B74D;
     opacity: 1;
     width: 30px;
-    /* Reducir la longitud de la línea */
 }
 
 .footer-redes-sociales a {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
     height: 30px;
-    /* Reducir el tamaño de los íconos */
     width: 30px;
-    /* Reducir el tamaño de los íconos */
     margin: 0 7px 7px 0;
-    /* Ajustar el margen */
     line-height: 30px;
-    /* Ajustar la alineación de texto */
     text-align: center;
     border-radius: 50%;
     color: #fff;
     font-size: 0.9rem;
-    /* Reducir el tamaño de la fuente de los íconos */
     transition: all 0.5s ease;
 }
 

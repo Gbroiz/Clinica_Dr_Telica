@@ -78,7 +78,7 @@
         <div class="contenedor-mision-vision">
             <img class="contenedor-mision-vision-imagen" src="img/Nosotros/Mision y vision.png"
                 alt="Imagen de manos equipo medico juntos">
-            <div class="contenedor-texto">
+            <div class="contenedor-texto" id="mision-vision">
                 <h2>Misión</h2>
                 <p>En la Clínica Dr. Larry Télica, nuestra misión es brindar atención médica integral y de alta calidad,
                     priorizando el bienestar de nuestros pacientes. Nos comprometemos a ofrecer un enfoque personalizado
@@ -91,7 +91,7 @@
                     servicios innovadores que respondan a las necesidades de nuestros pacientes.</p>
             </div>
         </div>
-        <div class="contenedor-valores">
+        <div class="contenedor-valores" id="valores">
             <h2>Valores</h2>
             <hr>
             <p>Nuestros valores son el pilar de nuestra práctica médica y guían todas nuestras acciones. Nos
@@ -120,6 +120,63 @@
                 </div>
             </div>
         </div>
+        <div class="contenedor-testimonios">
+            <h2>Testimonios de Clientes</h2>
+            <hr>
+            <p>Desde su apertura en 2017, la Clínica Dr. Télica ha acumulado una valiosa experiencia en atención médica,
+                destacándose por su enfoque en la calidad y el bienestar del paciente. Nuestros clientes han elogiado la
+                atención personalizada y el compromiso del equipo médico, lo que ha contribuido a numerosas historias de
+                éxito en la salud.
+
+                A lo largo de los años, hemos visto cómo nuestras intervenciones han transformado vidas, brindando a los
+                pacientes la confianza y el bienestar que buscan. En 2024, seguimos siendo un referente en el cuidado de
+                la salud, agradeciendo a nuestros pacientes por compartir sus experiencias y por elegirnos en su camino
+                hacia una mejor salud.
+            </p>
+            <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="img/Testimonios/Familia Porras Castro.png" class="testimonio-imagen"
+                                alt="Testimonio 1">
+                            <div class="testimonio-texto text-center">
+                                <p>"Excelente Doctor siempre atento y preocupado por sus pacientes. Dios le bendiga
+                                    mucho siempre 🙏"</p>
+                                <p><strong>- Familia Porras Castro</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="img/Testimonios/Silvia Valerio.png" class="testimonio-imagen" alt="Testimonio 2">
+                            <div class="testimonio-texto text-center">
+                                <p>"Excelente doctor. Muy interesado por sus pacientes"</p>
+                                <p><strong>- Silvia Valerio</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="img/Testimonios/Liz Chavarría.png" class="testimonio-imagen" alt="Testimonio 3">
+                            <div class="testimonio-texto text-center">
+                                <p>"Excelente un muy buen doctor gracias por traernos servicios de calidad"</p>
+                                <p><strong>- Lis Chavarría</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="div-footer">
@@ -127,40 +184,40 @@
                 <p><strong>Teléfono:</strong> 27665482</p>
                 <p><strong>Horario de apertura:</strong></p>
                 <ul>
-                    <li>Lunes: 09:30 - 12:00, 13:00 - 18:00</li>
-                    <li>Martes: 09:30 - 12:00, 13:00 - 18:00</li>
-                    <li>Miércoles: 09:30 - 12:00, 13:00 - 18:00</li>
-                    <li>Jueves: 09:30 - 12:00, 13:00 - 18:00</li>
-                    <li>Viernes: 09:30 - 12:00, 13:00 - 18:00</li>
-                    <li>Sábado: Cerrado</li>
-                    <li>Domingo: Cerrado</li>
+                    <li><a href="#">Lunes: 09:30 - 12:00, 13:00 - 18:00</a></li>
+                    <li><a href="#">Martes: 09:30 - 12:00, 13:00 - 18:00</a></li>
+                    <li><a href="#">Miércoles: 09:30 - 12:00, 13:00 - 18:00</a></li>
+                    <li><a href="#">Jueves: 09:30 - 12:00, 13:00 - 18:00</a></li>
+                    <li><a href="#">Viernes: 09:30 - 12:00, 13:00 - 18:00</a></li>
+                    <li><a href="#">Sábado: Cerrado</a></li>
+                    <li><a href="#">Domingo: Cerrado</a></li>
                 </ul>
             </div>
             <div class="footer-sobre-nosotros">
                 <h3>Nosotros</h3>
                 <hr>
                 <ul>
-                    <li>¿Quiénes somos?</li>
-                    <li>Misión y visión</li>
-                    <li>Valores</li>
+                    <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+                    <li><a href="nosotros.html#mision-vision">Misión y visión</a></li>
+                    <li><a href="nosotros.html#valores">Valores</a></li>
                 </ul>
             </div>
             <div class="footer-servicios">
                 <h3>Servicios</h3>
                 <hr>
                 <ul>
-                    <li>Medicina General</li>
-                    <li>Ginecología</li>
-                    <li>Psicología</li>
+                    <li><a href="servicios.html#medicina-general">Medicina General</a></li>
+                    <li><a href="servicios.html#ginecologia">Ginecología</a></li>
+                    <li><a href="servicios.html#psicologia">Psicología</a></li>
                 </ul>
             </div>
             <div class="footer-contacto">
-                <h3>Contacto</h3>
+                <h3>Información</h3>
                 <hr>
                 <ul>
-                    <li>Contáctenos</li>
-                    <li>Preguntas Frecuentes</li>
-                    <li>Ubicaciones</li>
+                    <li><a href="contacto.html#formulario-contacto">Contáctenos</a></li>
+                    <li><a href="preguntas_frecuentes.html#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                    <li><a href="contacto.html">Ubicaciones</a></li>
                 </ul>
             </div>
             <div class="footer-redes-sociales">

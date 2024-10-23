@@ -131,7 +131,7 @@ nav ul li a:hover {
     background-color: #D1B74D;
     color: #ffffff;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -149,6 +149,7 @@ nav ul li a:hover {
     background-color: white;
     display: flex;
     justify-content: center;
+    
 }
 
 .img-med {
@@ -173,7 +174,7 @@ nav ul li a:hover {
 .contenedor-bienvenida-texto hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 10%;
+    width: 65px;
     margin: 30px auto;
 }
 
@@ -193,20 +194,16 @@ nav ul li a:hover {
 .contenedor-servicios hr {
     border: 1px solid #D1B74D ;
     opacity: 1;
-    width: 5%;
+    width: 65px;
     margin-left: 63px;
 }
 
 .contenedor-servicios-cards {
     display: flex;
     justify-content: center;
-    /* Centrar tarjetas horizontalmente */
     flex-wrap: wrap;
-    /* Permitir que las tarjetas se ajusten en múltiples líneas */
     gap: 60px;
-    /* Espacio entre tarjetas */
     padding: 20px;
-    /* Espacio alrededor del contenedor */
 }
 
 .contenedor-servicios-cards h5 {
@@ -223,18 +220,13 @@ nav ul li a:hover {
 
 .cardservicios{
     border: solid rgba(24, 23, 23, 0.1);
-    /* Borde difuminado */
     border-radius: 10px;
-    /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra alrededor de la tarjeta */
     transition: transform 0.2s;
-    /* Efecto de transición al pasar el ratón */
 }
 
 .cardservicios:hover {
     transform: translateY(-5px);
-    /* Levantar la tarjeta al pasar el ratón */
 }
 
 .servicios-boton {
@@ -250,12 +242,10 @@ nav ul li a:hover {
     cursor: pointer;
     font-weight: bold;
     transition: all 250ms ease;
-    /* Transición suave para todos los cambios */
 }
 
 .servicios-boton:hover {
     transform: translateY(-5px);
-    /* Mueve el botón 5px hacia arriba */
 }
 
 /*Equipo médico*/
@@ -274,7 +264,7 @@ nav ul li a:hover {
 .contenedor-equipo hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 5%;
+    width: 65px;
     margin: 25px auto;
 }
 
@@ -286,54 +276,66 @@ nav ul li a:hover {
 }
 
 .contenedor-equipo-cards h5 {
-    text-align: center;  /* Alinea el título al centro */
+    text-align: center; 
     font-size: 16px;
     font-weight: bold;
     color: #264A80;
 }
 
 .contenedor-equipo-cards p {
-    margin-top: 5px;  /* Reduce el margen superior del párrafo */
+    margin-top: 5px; 
     font-size: 13px;
     font-weight: 300;
-    text-align: center;  /* Alinea el texto descriptivo al centro */
+    text-align: center; 
 }
 
 .cardEquipo {
     border: none !important;
     transition: transform 0.2s;
-    width: 180px;  /* Ancho de las tarjetas */
-    text-align: center;  /* Alineación del contenido de la tarjeta */
+    width: 180px; 
+    text-align: center; 
 }
 
 .cardEquipo:hover {
-    transform: translateY(-5px);  /* Efecto de levantamiento al hacer hover */
+    transform: translateY(-5px); 
 }
 
 .cardEquipo .card-img-top {
-    border-radius: 5%;  /* Forma de la imagen */
-    width: 150px;   /* Ancho fijo de la imagen */
-    height: 150px;  /* Alto fijo de la imagen */
-    object-fit: cover;  /* Recorta la imagen manteniendo la proporción y sin deformarla */
-    margin: 0 auto 5px;  /* Centra la imagen dentro de la tarjeta */
+    border-radius: 5%; 
+    width: 150px;   
+    height: 150px;  
+    object-fit: cover;  
+    margin: 0 auto 5px; 
     display: block;
 }
 
 /*Footer*/
 
+.div-footer a {
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    font-size: 0.9rem; 
 }
 
 .div-footer h3{
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px;
 }
 
 .div-footer ul{
@@ -342,26 +344,26 @@ nav ul li a:hover {
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px; 
 }
 
 .div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px; 
 }
 
 .footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px; 
+    width: 30px; 
+    margin: 0 7px 7px 0; 
+    line-height: 30px; 
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem; 
     transition: all 0.5s ease;
 }
 

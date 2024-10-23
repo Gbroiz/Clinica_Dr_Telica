@@ -79,7 +79,6 @@ nav ul li a.activo::after {
 
 nav ul li a:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
 }
 
 /*Inicio*/
@@ -89,8 +88,8 @@ nav ul li a:hover {
     padding: 40px;
     background-color: white;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align the content */
+    flex-direction: column; 
+    align-items: center; 
     padding-bottom: 60px;
 }
 
@@ -110,7 +109,7 @@ nav ul li a:hover {
 .contenedor-inicio hr {
     border: 1px solid #D1B74D; 
     opacity: 1; 
-    width: 7%; 
+    width: 65px;
     margin-top: 5px;
     margin-bottom: 30px;
 }
@@ -118,9 +117,7 @@ nav ul li a:hover {
 .contenedor-inicio-texto {
     font-weight: 300; 
     max-width: 130vh;
-    /* Puedes ajustar este valor */
     margin: 0 auto;
-    /* Centra el contenido */
 }
 
 /*Sección reseña histórica*/
@@ -136,7 +133,7 @@ nav ul li a:hover {
 .contenedor-reseña-historica hr {
     border: 1px solid #D1B74D; 
     opacity: 1; 
-    width: 7%; 
+    width: 65px;
     margin-top: 5px;
     margin-bottom: 30px;
 }
@@ -160,8 +157,8 @@ nav ul li a:hover {
 }
 
 .contenedor-texto{
-    text-align: left; /* Alinea el texto a la izquierda */
-    padding: 6rem; /* Añade un poco de espacio alrededor del texto */
+    text-align: left;
+    padding: 6rem; 
 }
 
 /*Sección de Misión y Valores*/
@@ -169,8 +166,8 @@ nav ul li a:hover {
 .contenedor-mision-vision{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; 
+    align-items: center;
     margin-bottom: 0;
     background-color: #FFFFFF;
 }
@@ -214,7 +211,7 @@ nav ul li a:hover {
 
 .contenedor-valores hr {
     border: 1px solid #D1B74D;
-    width: 7%;
+    width: 65px;
     margin: 0 auto 20px;
     opacity: 1;
 }
@@ -243,12 +240,12 @@ nav ul li a:hover {
     width: 250px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .valor-item:hover {
-    transform: scale(1.05); /* Aumenta el tamaño del item al 105% */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Opcional: aumentar sombra al hacer hover */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .valor-item h3 {
@@ -265,11 +262,90 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
+/* Contenedor testimonios */
+
+.contenedor-testimonios {
+    background-color: white; 
+    padding: 40px;
+    border-radius: 12px; 
+    color: #333;
+    text-align: center; 
+    margin: 40px 0; 
+}
+
+.contenedor-testimonios h2 {
+    font-size: 27px; 
+    font-weight: 600;
+    color: #0C1728; 
+}
+
+.contenedor-testimonios hr {
+    border: 1px solid #D1B74D; 
+    width: 65px;
+    margin: 10px auto;
+    opacity: 1;
+}
+
+.contenedor-testimonios p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0C1728;
+    max-width: 150vh; 
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonio-imagen {
+    width: 80px; /* Ajusta según sea necesario */
+    height: 80px; /* Ajusta según sea necesario */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    margin-top: 20px;
+}
+
+.testimonio {
+    padding: 20px;
+}
+
+.testimonio-texto {
+    text-align: center; /* Asegura que el texto del testimonio esté centrado */
+}
+
+.testimonio h5 {
+    font-weight: bold; /* Estilo del nombre */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: gray; /* Color gris para las flechas */
+    border-radius: 50%; /* Hacer las flechas redondas */
+}
+
+.carousel-control-prev-icon:active,
+.carousel-control-next-icon:active {
+    background-color: darkgray; /* Color más oscuro al hacer clic */
+}
+
 /*Footer*/
+
+.div-footer a {
+    color: inherit; /* Heredar el color del texto del li */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Necesario para aplicar transformaciones */
+    transition: transform 0.3s ease; /* Transición suave para el movimiento */
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
 
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; 
+    padding: 15px; /* Reducir el padding */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

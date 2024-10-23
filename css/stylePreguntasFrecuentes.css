@@ -65,7 +65,6 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    /* Para que la línea quede justo debajo del texto */
     height: 2px;
     width: 0;
     background-color: #264A80;
@@ -79,7 +78,6 @@ nav ul li a.activo::after {
 
 nav ul li a:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
 }
 
 /*Inicio*/
@@ -89,8 +87,8 @@ nav ul li a:hover {
     padding: 40px;
     background-color: white;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align the content */
+    flex-direction: column; 
+    align-items: center; 
     padding-bottom: 60px;
 }
 
@@ -104,7 +102,7 @@ nav ul li a:hover {
 .contenedor-inicio hr {
     border: 1px solid #D1B74D; 
     opacity: 1; 
-    width: 7%; 
+    width: 65px;
     margin-top: 5px;
     margin-bottom: 30px;
 }
@@ -116,32 +114,42 @@ nav ul li a:hover {
 
 /*Preguntas y respuestas*/
 
-/* Preguntas y respuestas */
 .contenedor-acordion-preguntas {
     padding: 50px;
 }
 
-
-/* Estilo para el botón expandido */
 .accordion-button:not(.collapsed) {
-    color: rgb(255, 255, 255); /* Color del texto */
+    color: rgb(255, 255, 255);
     background-color:  #7798C2; 
 }
+
 /*Footer*/
+
+.div-footer a {
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
 
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    font-size: 0.9rem; 
 }
 
 .div-footer h3{
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px; 
 }
 
 .div-footer ul{
@@ -150,26 +158,26 @@ nav ul li a:hover {
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px; 
 }
 
 .div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px; 
 }
 
 .footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px;
+    width: 30px; 
+    margin: 0 7px 7px 0; 
+    line-height: 30px; 
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem; 
     transition: all 0.5s ease;
 }
 

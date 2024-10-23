@@ -34,9 +34,7 @@ header {
 
 .logo_clinica_dr_telica {
     max-height: 140px;
-    /* Establece un máximo de altura */
     width: auto;
-    /* Mantiene la proporción del logo */
 }
 
 nav ul {
@@ -51,7 +49,6 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    /* Necesario para el pseudo-elemento ::after */
     text-decoration: none;
     font-size: 14px;
     color: #0C1728;
@@ -79,7 +76,6 @@ nav ul li a.activo::after {
 
 nav ul li a:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
 }
 
 /* Contenedor de inicio */
@@ -88,18 +84,18 @@ nav ul li a:hover {
     padding: 40px;
     background-color: white;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align the content */
+    flex-direction: column; 
+    align-items: center; 
     padding-bottom: 60px;
 }
 
 .card {
-    transition: transform 0.3s; /* Añadir un efecto de transición */
-    border: none; /* Eliminar borde por defecto */
+    transition: transform 0.3s; 
+    border: none; 
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.05); 
 }
 
 .contenedor-informacion-autora h2 {
@@ -112,47 +108,59 @@ nav ul li a:hover {
 .contenedor-informacion-autora hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 7%;
+    width: 65px;
     margin-top: 5px;
     margin-bottom: 30px;
 }
 
 .card-body {
-    padding: 20px; /* Ajustar el padding interno */
+    padding: 20px; 
 }
 
 .card-text {
-    margin-bottom: 1rem; /* Espacio entre los párrafos */
+    margin-bottom: 1rem; 
 }
 
 .btn-contactar {
-    background-color: #D1B74D; /* Color de fondo rojo */
-    color: white; /* Color del texto en blanco */
-    border: none; /* Eliminar borde */
-    padding: 10px 20px; /* Ajustar padding */
-    text-align: center; /* Centrar el texto */
+    background-color: #D1B74D;
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
 }
 
 .btn-contactar:hover {
-    background-color: #7798C2; /* Color más oscuro al pasar el mouse */
-    color: white; /* Mantener texto blanco */
+    background-color: #7798C2; 
+    color: white; 
 }
 
 /*Footer*/
 
+.div-footer a {
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px; 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    font-size: 0.9rem; 
 }
 
 .div-footer h3{
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px;
 }
 
 .div-footer ul{
@@ -161,26 +169,26 @@ nav ul li a:hover {
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px;
 }
 
 .div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px; 
 }
 
 .footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px; 
+    width: 30px;
+    margin: 0 7px 7px 0; 
+    line-height: 30px; 
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem; 
     transition: all 0.5s ease;
 }
 

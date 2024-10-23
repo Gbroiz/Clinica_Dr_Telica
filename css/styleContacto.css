@@ -34,9 +34,7 @@ header {
 
 .logo_clinica_dr_telica {
     max-height: 140px;
-    /* Establece un máximo de altura */
     width: auto;
-    /* Mantiene la proporción del logo */
 }
 
 nav ul {
@@ -51,7 +49,6 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    /* Necesario para el pseudo-elemento ::after */
     text-decoration: none;
     font-size: 14px;
     color: #0C1728;
@@ -65,7 +62,6 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    /* Para que la línea quede justo debajo del texto */
     height: 2px;
     width: 0;
     background-color: #264A80;
@@ -79,7 +75,6 @@ nav ul li a.activo::after {
 
 nav ul li a:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
 }
 
 /*Inicio*/
@@ -106,7 +101,7 @@ nav ul li a:hover {
 .contenedor-contacto hr {
     border: 1px solid #D1B74D; 
     opacity: 1; 
-    width: 7%; 
+    width: 65px;
 }
 
 .contenedor-contacto p{
@@ -119,47 +114,47 @@ nav ul li a:hover {
 /*Información de contacto*/
 
 .box-contacto {
-    display: flex; /* Flexbox para alinear horizontalmente el icono y el texto */
-    align-items: flex-start; /* Alinea los ítems al inicio para que no se centren verticalmente */
-    margin-bottom: 40px; /* Espacio más notable entre cada box */
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 40px; 
 }
 
 .icon {
-    background-color: #ECF4F9; /* Color de fondo del círculo */
-    border-radius: 50%; /* Crea un círculo perfecto */
-    width: 40px; /* Ancho fijo para asegurar un círculo */
-    height: 40px; /* Alto fijo igual al ancho para un círculo perfecto */
-    display: flex; /* Para alinear el icono dentro del círculo */
-    align-items: center; /* Centrar el icono verticalmente */
-    justify-content: center; /* Centrar el icono horizontalmente */
-    margin-right: 15px; /* Espacio entre el icono y el texto */
-    transition: background-color 0.3s; /* Transición suave para el cambio de color */
-    font-size: 1.2em; /* Tamaño del icono */
+    background-color: #ECF4F9;
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 15px; 
+    transition: background-color 0.3s; 
+    font-size: 1.2em; 
 }
 
 .icon:hover {
-    background-color: #7798C2; /* Cambia el color al hacer hover */
-    color: white; /* Cambia el color del icono al hacer hover */
+    background-color: #7798C2; 
+    color: white; 
 }
 
 .texto-contacto h3 {
-    margin: 0; /* Elimina el margen del encabezado */
-    font-size: 1em; /* Tamaño más pequeño para el título */
+    margin: 0; 
+    font-size: 1em; 
 }
 
 .texto-contacto p {
-    margin: 0; /* Elimina el margen de los párrafos */
-    font-size: 0.9em; /* Tamaño más pequeño para los párrafos */
+    margin: 0; 
+    font-size: 0.9em;
 }
 
 /*Estilos del formulario*/
 
 form {
     margin-top: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del formulario */
-    padding: 20px; /* Opcional: Añadir un relleno para separar el contenido del borde */
-    border-radius: 8px; /* Bordes redondeados opcionales */
-    background-color: #ECF4F9; /* Asegura un fondo claro para el formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: #ECF4F9; 
 }
 
 .rdb-genero:checked {
@@ -184,19 +179,31 @@ form {
 
 /*Footer*/
 
+.div-footer a {
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
 .div-footer {
     background-color: #7798C2;
-    padding: 15px; /* Reducir el padding */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color:#FFFFFF;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente general */
+    font-size: 0.9rem; 
 }
 
 .div-footer h3{
     font-weight: bold;
-    font-size: 18px; /* Reducir el tamaño del título */
+    font-size: 18px;
 }
 
 .div-footer ul{
@@ -205,26 +212,26 @@ form {
 }
 
 .div-footer ul li {
-    margin-bottom: 3px; /* Ajustar el margen inferior */
+    margin-bottom: 3px; 
 }
 
 .div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px; /* Reducir la longitud de la línea */
+    width: 30px; 
 }
 
 .footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px; /* Reducir el tamaño de los íconos */
-    width: 30px; /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0; /* Ajustar el margen */
-    line-height: 30px; /* Ajustar la alineación de texto */
+    height: 30px; 
+    width: 30px; 
+    margin: 0 7px 7px 0; 
+    line-height: 30px; 
     text-align: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 0.9rem; /* Reducir el tamaño de la fuente de los íconos */
+    font-size: 0.9rem; 
     transition: all 0.5s ease;
 }
 

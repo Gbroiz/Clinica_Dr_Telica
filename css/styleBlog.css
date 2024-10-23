@@ -34,9 +34,7 @@ header {
 
 .logo_clinica_dr_telica {
     max-height: 140px;
-    /* Establece un máximo de altura */
     width: auto;
-    /* Mantiene la proporción del logo */
 }
 
 nav ul {
@@ -51,7 +49,6 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    /* Necesario para el pseudo-elemento ::after */
     text-decoration: none;
     font-size: 14px;
     color: #0C1728;
@@ -65,7 +62,6 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -4px;
-    /* Para que la línea quede justo debajo del texto */
     height: 2px;
     width: 0;
     background-color: #264A80;
@@ -79,7 +75,6 @@ nav ul li a.activo::after {
 
 nav ul li a:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
 }
 
 /*Sección principal*/
@@ -99,9 +94,7 @@ nav ul li a:hover {
 
 .contenedor-principal-texto {
     max-width: 110vh;
-    /* Puedes ajustar este valor */
     margin: 0 auto;
-    /* Centra el contenido */
 }
 
 .contenedor-principal h2 {
@@ -132,7 +125,7 @@ nav ul li a:hover {
 .contenedor-categorias hr {
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 5%;
+    width: 65px;
     margin-top: 2px;
     margin-bottom: 30px;
 }
@@ -143,11 +136,8 @@ nav ul li a:hover {
     border: none !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 300px;
-    /* Ajusta el ancho del card */
     height: 250px;
-    /* Ajusta la altura del card */
     margin: 5px;
-    /* Espacio entre los cards */
 }
 
 .card-categoria:hover {
@@ -257,7 +247,7 @@ nav ul li a:hover {
 .contenedor-articulos hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 5%;
+    width: 65px;
     margin-top: 2px;
     margin-bottom: 30px;
 }
@@ -304,61 +294,63 @@ nav ul li a:hover {
 
 /*Footer*/
 
+.div-footer a {
+    color: inherit; 
+    text-decoration: none;
+    display: inline-block; 
+    transition: transform 0.3s ease;
+}
+
+.div-footer a:hover {
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
+
 .div-footer {
     background-color: #7798C2;
-    padding: 15px;
-    /* Reducir el padding */
+    padding: 15px; 
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    /* Reducir el tamaño de la fuente general */
+    color:#FFFFFF;
+    font-size: 0.9rem; 
 }
 
-.div-footer h3 {
+.div-footer h3{
     font-weight: bold;
     font-size: 18px;
-    /* Reducir el tamaño del título */
 }
 
-.div-footer ul {
+.div-footer ul{
     list-style-type: none;
     padding: 0;
 }
 
 .div-footer ul li {
-    margin-bottom: 3px;
-    /* Ajustar el margen inferior */
+    margin-bottom: 3px; 
 }
 
-.div-footer hr {
+.div-footer hr{
     border: 1px solid #D1B74D;
     opacity: 1;
-    width: 30px;
-    /* Reducir la longitud de la línea */
+    width: 30px; 
 }
 
-.footer-redes-sociales a {
+.footer-redes-sociales a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
-    height: 30px;
-    /* Reducir el tamaño de los íconos */
-    width: 30px;
-    /* Reducir el tamaño de los íconos */
-    margin: 0 7px 7px 0;
-    /* Ajustar el margen */
-    line-height: 30px;
-    /* Ajustar la alineación de texto */
+    height: 30px; 
+    width: 30px; 
+    margin: 0 7px 7px 0; 
+    line-height: 30px; 
     text-align: center;
     border-radius: 50%;
     color: #fff;
     font-size: 0.9rem;
-    /* Reducir el tamaño de la fuente de los íconos */
     transition: all 0.5s ease;
 }
 
-.footer-redes-sociales a:hover {
+.footer-redes-sociales a:hover{
     color: #000;
     background-color: #fff;
 }
