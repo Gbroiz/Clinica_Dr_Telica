@@ -92,6 +92,12 @@ nav ul li a:hover {
     padding-bottom: 60px;
 }
 
+.img-preguntas-respuestas {
+    height: 80px; 
+    width: auto; 
+    margin-top: 10px; 
+}
+
 .contenedor-inicio h2 {
     font-size: 30px; 
     color: #264A80; 

@@ -89,22 +89,11 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 95px;
-    background-image: url(../img/Fondo-contenedor-principal.png);
+    background-image: url(../img/Fondo\ Principal\ Inicio\ \(2560\ x\ 1440\ px\).png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-}
-
-.imagen-principal {
-    width: 300px;
-    height: 370px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Sombra alrededor de la tarjeta */
-    transition: transform 0.2s;
-    margin-right: 30px;
-    object-fit: cover;
 }
 
 .contenedor-principal-texto h2 {
