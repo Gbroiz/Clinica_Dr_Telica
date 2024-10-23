@@ -326,16 +326,16 @@ nav ul li a:hover {
 
 .carousel-control-prev-icon:active,
 .carousel-control-next-icon:active {
-    background-color: darkgray; /* Color más oscuro al hacer clic */
+    background-color: darkgray; 
 }
 
 /*Footer*/
 
 .div-footer a {
-    color: inherit; /* Heredar el color del texto del li */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Necesario para aplicar transformaciones */
-    transition: transform 0.3s ease; /* Transición suave para el movimiento */
+    color: inherit; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
 }
 
 .div-footer a:hover {
