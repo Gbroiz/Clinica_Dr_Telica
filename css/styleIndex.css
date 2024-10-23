@@ -51,7 +51,6 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    /* Necesario para el pseudo-elemento ::after */
     text-decoration: none;
     font-size: 14px;
     color: #0C1728;
