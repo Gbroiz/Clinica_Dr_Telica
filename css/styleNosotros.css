@@ -297,8 +297,8 @@ nav ul li a:hover {
 }
 
 .testimonio-imagen {
-    width: 80px; /* Ajusta según sea necesario */
-    height: 80px; /* Ajusta según sea necesario */
+    width: 80px; 
+    height: 80px;
     border-radius: 50%; /* Hace que la imagen sea circular */
     margin-bottom: 10px; /* Espacio debajo de la imagen */
     margin-top: 20px;
