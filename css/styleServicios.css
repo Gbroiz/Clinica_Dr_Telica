@@ -11,46 +11,27 @@ body {
     background-color: #ECF4F9;
 }
 
-/*Inicio - Carrousel*/
+/*Inicio*/
 
-/* Contenedor del carrusel con ancho del 100% */
-.contenedor-carrusel-principal {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
+.contenedor-principal{
+    padding: 150px;
+    background-image: url(../img/Rayos\ X.png);
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-/* Tamaño de las imágenes del carrusel */
-.carrusel-imagen {
-    width: 100%;
-    /* Ancho completo */
-    height: 400px;
-    /* Mantener la altura */
-    object-fit: cover;
-    /* Ajusta las imágenes al tamaño sin distorsión */
-}
-
-/* Centrando el texto sobre las imágenes del carrusel */
-.carrusel-texto {
-    position: absolute;
-    top: 50%;
-    /* Centra el texto verticalmente */
-    left: 50%;
-    /* Centra el texto horizontalmente */
+.contenedor-principal-texto {
     text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    color: white !important;
+    color: #FFFFFF;
 }
 
-/* Texto del título del carrusel */
-.carrusel-titulo {
+.contenedor-principal-texto h5{
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Texto de descripción del carrusel */
-.carrusel-descripcion {
+.contenedor-principal-texto p{
     font-size: 16px;
 }
 
