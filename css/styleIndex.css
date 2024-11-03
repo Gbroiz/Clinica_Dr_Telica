@@ -42,15 +42,14 @@ body {
     color: white !important;
 }
 
-/* Texto del título del carrusel */
+/* Tamaño del título y descripción */
 .carrusel-titulo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
 }
 
-/* Texto de descripción del carrusel */
 .carrusel-descripcion {
-    font-size: 16px;
+    font-size: 1.2rem; /* Tamaño de la descripción */
 }
 
 /* Texto y botón en el lado izquierdo */
@@ -90,9 +89,75 @@ body {
     cursor: pointer;
 }
 
+/* Títulos y párrafos */
+.contenedor-principal-texto h2 {
+    font-size: 2rem; /* Tamaño de fuente del título en pantallas grandes */
+    margin-bottom: 10px;
+}
+
+.contenedor-principal-texto p {
+    font-size: 1rem; /* Tamaño de fuente del párrafo en pantallas grandes */
+    line-height: 1.5;
+}
+
+/* Botón */
+.cita-boton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #D1B74D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en botón */
 .cita-boton:hover {
-    transition: all 250ms ease;
-    font-weight: bold;
+    background-color: #D1B74D;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-principal-texto {
+        max-width: 90%;
+        left: 5%;
+        top: 45%; /* Cambia la posición en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .contenedor-principal-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .contenedor-principal-texto p {
+        font-size: 0.9rem;
+    }
+
+    .cita-boton {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media query para pantallas muy pequeñas (moviles) */
+@media (max-width: 480px) {
+    .contenedor-principal-texto {
+        top: 50%; /* Aumenta un poco la posición para móviles */
+    }
+
+    .contenedor-principal-texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .contenedor-principal-texto p {
+        font-size: 0.8rem;
+    }
+
+    .cita-boton {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
 }
 
 /*Bienvenida*/
@@ -266,3 +331,88 @@ body {
     margin: 0 auto 5px; 
     display: block;
 }
+/* Estilos generales del header esto es para hacerlo responsivo */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333; /* Fondo oscuro */
+    position: relative; /* Para posicionar elementos hijos */
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+}
+
+/* Logo de la clínica */
+.logo_clinica_dr_telica {
+    width: 150px;
+}
+
+/* Enlaces de navegación - Normal */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: rgb(12, 12, 12); /* Color del texto de los enlaces en el menú */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover en enlaces */
+.nav-links a:hover {
+    color: #ddd; /* Color del texto al pasar el ratón */
+}
+
+/* Botón de menú hamburguesa */
+.menu-btn {
+    font-size: 24px;
+    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Oculto en pantallas grandes */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Oculta el menú en pantallas pequeñas */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px; /* Distancia desde la parte superior del header */
+        right: 0;
+        background-color: #333; /* Fondo oscuro sólido para menú desplegable */
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Muestra el botón hamburguesa */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Muestra el menú cuando se activa */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Enlaces en el menú desplegable */
+    .nav-links a {
+        color: white; /* Texto blanco en el menú hamburguesa */
+    }
+
+    .nav-links a:hover {
+        color: #ddd; /* Color al pasar el ratón */
+    }
+}
+
