@@ -273,7 +273,6 @@ body {
 }
 
 .servicios-boton {
-    margin-left: 63px;
     margin-top: 20px;
     padding: 15px 20px;
     background-color: #ECF4F9;
@@ -285,10 +284,27 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: all 250ms ease;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
 }
 
 .servicios-boton:hover {
     transform: translateY(-5px);
+}
+
+.contenedor-servicios a {
+    text-decoration: none; /* Quitar subrayado de todos los enlaces dentro de .contenedor-servicios */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .servicios-boton {
+        display: block; /* Para que ocupe toda la línea */
+        width: 80%; /* Ajusta el ancho en pantallas pequeñas */
+        margin-top: 15px; /* Espacio entre las tarjetas y el botón */
+        text-align: center; /* Centra el texto dentro del botón */
+    }
 }
 
 /*Equipo médico*/
