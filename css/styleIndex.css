@@ -121,6 +121,9 @@ body {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
+
+
+    
     .contenedor-principal-texto {
         max-width: 90%;
         left: 5%;
@@ -135,6 +138,14 @@ body {
     .contenedor-principal-texto p {
         font-size: 0.9rem;
     }
+
+    .carrusel-titulo {
+        font-size:  1.5rem; /* Tamaño ajustado para tabletas */
+    }
+    .carrusel-descripcion {
+        font-size: 0.9rem; /* Tamaño ajustado para tabletas */
+    }
+
 
     .cita-boton {
         padding: 8px 16px;
@@ -154,6 +165,13 @@ body {
 
     .contenedor-principal-texto p {
         font-size: 0.8rem;
+    }
+
+    .carrusel-titulo {
+        font-size: 1.2rem; /* Tamaño ajustado para móviles */
+    }
+    .carrusel-descripcion {
+        font-size: 0.8rem; /* Tamaño ajustado para móviles */
     }
 
     .cita-boton {
