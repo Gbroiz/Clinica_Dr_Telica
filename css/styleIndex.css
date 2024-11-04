@@ -44,12 +44,13 @@ body {
 
 /* Tamaño del título y descripción */
 .carrusel-titulo {
-    font-size: 2.5rem; /* Tamaño grande para el título */
-    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    font-size: 22px; 
+    margin-bottom: 0.5rem; 
+    font-weight: bold;
 }
 
 .carrusel-descripcion {
-    font-size: 1.2rem; /* Tamaño de la descripción */
+    font-size: 1rem; 
 }
 
 /* Texto y botón en el lado izquierdo */
@@ -91,11 +92,12 @@ body {
 
 /* Títulos y párrafos */
 .contenedor-principal-texto h2 {
-    font-size: 2rem; /* Tamaño de fuente del título en pantallas grandes */
+    font-size: 24px; /* Tamaño de fuente del título en pantallas grandes */
     margin-bottom: 10px;
 }
 
 .contenedor-principal-texto p {
+    margin-top: 11px;
     font-size: 1rem; /* Tamaño de fuente del párrafo en pantallas grandes */
     line-height: 1.5;
 }
