@@ -42,6 +42,7 @@ body {
 
 /*Sección categorías*/
 
+/* Estilos generales para el contenedor */
 .contenedor-categorias {
     display: flex;
     flex-direction: column;
@@ -49,6 +50,7 @@ body {
     padding: 50px;
 }
 
+/* Estilos para el título */
 .contenedor-categorias h3 {
     font-size: 25px;
     color: #264A80;
@@ -56,6 +58,7 @@ body {
     font-weight: bold;
 }
 
+/* Estilos para la línea horizontal */
 .contenedor-categorias hr {
     border: 1px solid #D1B74D;
     opacity: 1;
@@ -64,36 +67,79 @@ body {
     margin-bottom: 30px;
 }
 
+/* Estilos para las tarjetas */
 .card-categoria {
     position: relative;
     overflow: hidden;
     border: none !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px;
+    width: 100%; /* Cambié el width a 100% para que se ajuste al contenedor */
     height: 250px;
     margin: 5px;
+    border-radius: 15px;
 }
 
+/* Efecto de hover */
 .card-categoria:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para las imágenes */
 .card-img {
     border-radius: 15px;
     object-fit: cover;
     height: 100%;
 }
 
+/* Overlay sobre las imágenes */
 .card-img-overlay {
     border-radius: 15px;
     padding: 20px;
 }
 
+/* Estilos del título dentro del overlay */
 .card-title {
     margin-bottom: 0;
     font-size: 22px;
     font-weight: 300;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Cambiar las tarjetas a una sola columna en pantallas pequeñas */
+    .col-sm-12 {
+        flex: 0 0 100%; /* Las tarjetas ocuparán todo el ancho */
+    }
+
+    /* Ajustar las imágenes para que no sean tan grandes en pantallas pequeñas */
+    .card-img {
+        height: 180px; /* Disminuir la altura de las imágenes en pantallas pequeñas */
+    }
+
+    /* Ajustar el tamaño del botón */
+    .btn-abrir-sidebar {
+        width: 100%; /* El botón ocupará todo el ancho en pantallas pequeñas */
+        margin-top: 20px;
+    }
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 769px) {
+    /* Las tarjetas deben mostrar 3 por fila en pantallas grandes */
+    .col-md-4 {
+        flex: 0 0 33.33%; /* Las tarjetas ocuparán 33.33% de la fila */
+    }
+
+    /* Estilo para las imágenes más grandes en pantallas grandes */
+    .card-img {
+        height: 250px; /* Las imágenes serán más grandes en pantallas grandes */
+    }
+
+    /* Asegurarse de que el botón no se expanda demasiado */
+    .btn-abrir-sidebar {
+        width: auto;
+    }
 }
 
 /*Side bar*/
