@@ -110,3 +110,87 @@ form {
     border-color: #7798C2; 
     box-shadow: 0 0 5px  #7798C2; 
 }
+/* Estilos generales del header esto es para hacerlo responsivo */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333; /* Fondo oscuro */
+    position: relative; /* Para posicionar elementos hijos */
+    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+}
+
+/* Logo de la clínica */
+.logo_clinica_dr_telica {
+    width: 150px;
+}
+
+/* Enlaces de navegación - Normal */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: rgb(12, 12, 12); /* Color del texto de los enlaces en el menú */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover en enlaces */
+.nav-links a:hover {
+    color: #ddd; /* Color del texto al pasar el ratón */
+}
+
+/* Botón de menú hamburguesa */
+.menu-btn {
+    font-size: 24px;
+    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Oculto en pantallas grandes */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Oculta el menú en pantallas pequeñas */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px; /* Distancia desde la parte superior del header */
+        right: 0;
+        background-color: #333; /* Fondo oscuro sólido para menú desplegable */
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Muestra el botón hamburguesa */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Muestra el menú cuando se activa */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Enlaces en el menú desplegable */
+    .nav-links a {
+        color: white; /* Texto blanco en el menú hamburguesa */
+    }
+
+    .nav-links a:hover {
+        color: #ddd; /* Color al pasar el ratón */
+    }
+}
