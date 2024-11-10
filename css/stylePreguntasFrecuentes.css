@@ -122,49 +122,6 @@ body {
     color: #000;
     background-color: #fff;
 }
-/* Estilos generales del header esto es para hacerlo responsivo */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333; /* Fondo oscuro */
-    position: relative; /* Para posicionar elementos hijos */
-    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
-}
-
-/* Logo de la clínica */
-.logo_clinica_dr_telica {
-    width: 150px;
-}
-
-/* Enlaces de navegación - Normal */
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: rgb(12, 12, 12); /* Color del texto de los enlaces en el menú */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-/* Hover en enlaces */
-.nav-links a:hover {
-    color: #ddd; /* Color del texto al pasar el ratón */
-}
-
-/* Botón de menú hamburguesa */
-.menu-btn {
-    font-size: 24px;
-    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* Oculto en pantallas grandes */
-}
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -205,4 +162,14 @@ header {
     .nav-links a:hover {
         color: #ddd; /* Color al pasar el ratón */
     }
+
+    .contenedor-inicio h2 {
+        font-size: 24px;
+    }
+
+    .contenedor-inicio p {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
 }

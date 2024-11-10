@@ -30,7 +30,7 @@ nav ul {
     display: flex;
     list-style: none;
     margin-top: 14px;
-    gap: 5px !important;
+    gap: 2px !important;
 }
 
 nav ul li {
@@ -67,4 +67,61 @@ nav ul li a.activo::after {
 nav ul li a:hover {
     color: #264A80;
     /* Cambia el color del texto al hacer hover */
+}
+
+/* Botón de menú hamburguesa */
+.menu-btn {
+    font-size: 24px;
+    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Oculto en pantallas grandes */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Oculta el menú en pantallas pequeñas */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px; /* Distancia desde la parte superior del header */
+        right: 0;
+        background-color: #333; /* Fondo oscuro sólido para menú desplegable */
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        list-style-type: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el padding por defecto */
+        margin: 0; /* Elimina el margen por defecto */
+        display: flex; /* Usar flexbox para el centramiento */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente si es necesario */
+    }
+
+    /* Muestra el botón hamburguesa */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Muestra el menú cuando se activa */
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Enlaces en el menú desplegable */
+    .nav-links a {
+        color: white; /* Texto blanco en el menú hamburguesa */
+    }
+
+    .nav-links a:hover {
+        color: #ddd; /* Color al pasar el ratón */
+    }
 }

@@ -178,7 +178,7 @@ body {
         padding: 6px 12px;
         font-size: 0.8rem;
     }
-}
+} 
 
 /*Bienvenida*/
 
@@ -218,7 +218,7 @@ body {
     border: 1px solid #D1B74D;
     opacity: 1;
     width: 65px;
-    margin: 30px auto;
+    margin: 15px auto;
 }
 
 /*Servicios Médicos*/
@@ -273,7 +273,7 @@ body {
 }
 
 .servicios-boton {
-    margin-top: 20px;
+    margin-top: 15px !important;
     padding: 15px 20px;
     background-color: #ECF4F9;
     color: #D1B74D;
@@ -287,6 +287,7 @@ body {
     display: inline-block;
     margin: 0 auto;
     text-decoration: none;
+    margin-left: 63px;
 }
 
 .servicios-boton:hover {
@@ -307,6 +308,14 @@ body {
     }
 }
 
+.chart-container {
+    display: flex;
+    justify-content: center; /* Centra el gráfico horizontalmente */
+    align-items: center; /* Centra el gráfico verticalmente */
+    width: 100%; /* Asegura que ocupe el ancho completo disponible */
+    height: 400px; /* Ajusta la altura según lo necesario */
+}
+
 /*Equipo médico*/
 
 .contenedor-equipo {
@@ -324,7 +333,7 @@ body {
     border: 1px solid #D1B74D;
     opacity: 1;
     width: 65px;
-    margin: 25px auto;
+    margin: 15px auto;
 }
 
 .contenedor-equipo-cards {
@@ -367,88 +376,15 @@ body {
     margin: 0 auto 5px; 
     display: block;
 }
-/* Estilos generales del header esto es para hacerlo responsivo */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333; /* Fondo oscuro */
-    position: relative; /* Para posicionar elementos hijos */
-    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
-}
 
-/* Logo de la clínica */
-.logo_clinica_dr_telica {
-    width: 150px;
-}
-
-/* Enlaces de navegación - Normal */
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-}
-
-.nav-links a {
-    color: rgb(12, 12, 12); /* Color del texto de los enlaces en el menú */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-/* Hover en enlaces */
-.nav-links a:hover {
-    color: #ddd; /* Color del texto al pasar el ratón */
-}
-
-/* Botón de menú hamburguesa */
-.menu-btn {
-    font-size: 24px;
-    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none; /* Oculto en pantallas grandes */
-}
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Oculta el menú en pantallas pequeñas */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px; /* Distancia desde la parte superior del header */
-        right: 0;
-        background-color: #333; /* Fondo oscuro sólido para menú desplegable */
-        width: 100%;
-        padding: 20px;
-        border-radius: 0 0 5px 5px;
-        text-align: center;
-        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 
     /* Muestra el botón hamburguesa */
     .menu-btn {
         display: block;
     }
 
-    /* Muestra el menú cuando se activa */
-    .nav-links.active {
-        display: block;
-    }
-
-    /* Enlaces en el menú desplegable */
-    .nav-links a {
-        color: white; /* Texto blanco en el menú hamburguesa */
-    }
-
-    .nav-links a:hover {
-        color: #ddd; /* Color al pasar el ratón */
-    }
 }
 
