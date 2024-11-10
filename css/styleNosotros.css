@@ -278,38 +278,6 @@ body {
         width: 100%;
     }
 }
-/* Estilos generales para pantalla grande */
-.contenedor-reseña-historica,
-.contenedor-mision-vision {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    gap: 20px;
-}
-
-.contenedor-reseña-historica-imagen,
-.contenedor-mision-vision-imagen {
-    width: 45%; /* Establece el mismo ancho para ambas imágenes */
-    max-height: 530px; /* Ajusta la altura máxima para mantener ambas imágenes consistentes */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.contenedor-texto {
-    width: 50%; /* Texto ocupa la mitad del contenedor en pantallas grandes */
-    font-size: 1rem;
-}
-
-.contenedor-texto h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.contenedor-texto p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
 
 /* Responsividad para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {

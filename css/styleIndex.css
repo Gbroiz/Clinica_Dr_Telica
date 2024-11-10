@@ -304,6 +304,10 @@ body {
         margin-top: 15px; /* Espacio entre las tarjetas y el botón */
         text-align: center; /* Centra el texto dentro del botón */
     }
+
+    .grafico-container {
+        height: 250px; /* Ajusta la altura en pantallas pequeñas */
+    }
 }
 
 .chart-container {

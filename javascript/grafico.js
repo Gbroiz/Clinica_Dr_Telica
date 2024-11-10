@@ -31,6 +31,8 @@ async function createSatisfaccionChart() {
             }]
         },
         options: {
+            responsive: true, // Hacerlo responsivo
+            maintainAspectRatio: false, // Mantiene la relación de aspecto si lo deseas
             scales: {
                 y: {
                     beginAtZero: true,
