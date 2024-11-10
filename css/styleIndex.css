@@ -122,8 +122,6 @@ body {
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
 
-
-    
     .contenedor-principal-texto {
         max-width: 90%;
         left: 5%;
@@ -377,14 +375,10 @@ body {
     display: block;
 }
 
-
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
 
-    /* Muestra el botón hamburguesa */
-    .menu-btn {
-        display: block;
-    }
+
 
 }
 
