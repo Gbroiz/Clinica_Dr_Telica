@@ -308,14 +308,40 @@ body {
     .grafico-container {
         height: 250px; /* Ajusta la altura en pantallas pequeñas */
     }
+
+    .contenedor-servicios {
+        padding: 40px 20px; /* Menos espacio en pantallas pequeñas */
+    }
+
+    .contenedor-servicios h3 {
+        font-size: 20px;
+        margin-left: 0; /* Centrado en pantallas pequeñas */
+        text-align: center; /* Centrado en pantallas pequeñas */
+    }
+
+    .contenedor-servicios-cards {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px; /* Ajusta el espacio entre las tarjetas */
+    }
+
+    .cardservicios {
+        width: 90%; /* Las tarjetas ocupan el 90% del ancho en pantallas pequeñas */
+        max-width: 350px; /* Limita el tamaño máximo de las tarjetas */
+    }
+
 }
 
 .chart-container {
     display: flex;
     justify-content: center; /* Centra el gráfico horizontalmente */
     align-items: center; /* Centra el gráfico verticalmente */
-    width: 100%; /* Asegura que ocupe el ancho completo disponible */
-    height: 400px; /* Ajusta la altura según lo necesario */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 800px; /* Establece un ancho máximo (ajústalo según sea necesario) */
+    height: 300px; /* Ajusta la altura según lo necesario */
+    margin: 0 auto; /* Asegura que el contenedor esté centrado en el eje horizontal */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*Equipo médico*/
