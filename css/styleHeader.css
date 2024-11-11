@@ -87,7 +87,7 @@ nav ul li a:hover {
         position: absolute;
         top: 80px; /* Distancia desde la parte superior del header */
         right: 0;
-        background-color: #333; /* Fondo oscuro sólido para menú desplegable */
+        background-color: rgba(52, 58, 64, 0.95);
         width: 100%;
         padding: 20px;
         border-radius: 0 0 5px 5px;

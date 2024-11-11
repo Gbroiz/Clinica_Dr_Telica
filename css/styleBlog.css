@@ -42,7 +42,6 @@ body {
 
 /*Sección categorías*/
 
-/* Estilos generales para el contenedor */
 .contenedor-categorias {
     display: flex;
     flex-direction: column;
@@ -121,24 +120,6 @@ body {
     .btn-abrir-sidebar {
         width: 100%; /* El botón ocupará todo el ancho en pantallas pequeñas */
         margin-top: 20px;
-    }
-}
-
-/* Media Queries para pantallas grandes */
-@media (min-width: 769px) {
-    /* Las tarjetas deben mostrar 3 por fila en pantallas grandes */
-    .col-md-4 {
-        flex: 0 0 33.33%; /* Las tarjetas ocuparán 33.33% de la fila */
-    }
-
-    /* Estilo para las imágenes más grandes en pantallas grandes */
-    .card-img {
-        height: 250px; /* Las imágenes serán más grandes en pantallas grandes */
-    }
-
-    /* Asegurarse de que el botón no se expanda demasiado */
-    .btn-abrir-sidebar {
-        width: auto;
     }
 }
 
@@ -284,7 +265,6 @@ body {
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
-    
     /* Hacer que las tarjetas y las categorías se ajusten bien en pantallas pequeñas */
     .card-categoria {
         width: 100%; /* Hacer las tarjetas más estrechas */
