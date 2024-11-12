@@ -90,15 +90,78 @@
                         <h5 class="card-title">Ultrasonido Abdominal</h5>
                         <p class="card-text">Examen no invasivo que usa ondas sonoras para visualizar órganos
                             abdominales y detectar problemas. Es rápido, seguro y sin radiación.</p>
-                            <div class="d-flex justify-content-end gap-2">
-                                <button class="btn btn-comprar">Comprar</button>
-                                <button class="btn btn-ver-mas">Ver más</button>
-                            </div>
+                        <div class="d-flex justify-content-end gap-2">
+                            <button class="btn btn-comprar">Comprar</button>
+                            <button class="btn btn-ver-mas" data-bs-toggle="modal" data-bs-target="#detalleModal">Ver
+                                más</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </section>
+
+   <!-- Modal de detalle de producto con Bootstrap -->
+<div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detalleModalLabel">Ultrasonido Abdominal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Carrusel de imágenes -->
+                    <div class="col-md-6">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/Servicios/Ultrasonido Abdominal.png" class="d-block w-100" alt="Imagen 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/Servicios/Ultrasonido_1.png" class="d-block w-100" alt="Imagen 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/Servicios/Ultrasonido_2.png" class="d-block w-100" alt="Imagen 3">
+                                </div>
+                            </div>
+                            <!-- Controles del carrusel -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Información del servicio -->
+                    <div class="col-md-6">
+                        <div class="modal-reseñas my-3">
+                            <span>Reseña de usuarios: ★★★★☆</span>
+                        </div>
+                        <p class="modal-precio fs-5">Precio: ¢40,000</p>
+                        <p class="modal-disponibilidad"><strong>Disponibilidad:</strong> Disponible en la clínica física sábados de 9:30 AM a 6:00 PM. Una vez agendada la solicitud, nos pondremos en contacto contigo prontamente para confirmar los horarios disponibles y coordinar la cita en el horario que mejor se ajuste a tus necesidades.</p>
+                        <p class="modal-descripcion"><strong>Descripción:</strong> El ultrasonido abdominal es un examen no invasivo que utiliza ondas sonoras para crear imágenes del interior del abdomen. Se utiliza para evaluar órganos como el hígado, los riñones, el páncreas y el bazo, entre otros. Es recomendable para detectar problemas como cálculos renales, enfermedades hepáticas o quistes.</p>
+                        <p><strong>Tiempos de atención:</strong> El examen dura aproximadamente 30 minutos. Los resultados estarán listos para ser consultados en línea o recogidos en la clínica dentro de 24 horas.</p>
+                        <p><strong>Opciones de atención:</strong></p>
+                        <ul>
+                            <li>Consulta presencial en la clínica para el ultrasonido.</li>
+                            <li>Si se requiere, el informe puede enviarse por correo electrónico.</li>
+                        </ul>
+                        <p><strong>Garantía del servicio:</strong> Garantía de calidad en la interpretación de los resultados. Si hay algún inconveniente con los resultados o el procedimiento, se ofrece una consulta de revisión sin costo adicional.</p>
+                        <p><a href="#">Política de cancelación y reprogramación de citas</a></p>
+                        <p><a href="#">Contacto directo con la clínica</a></p>
+                        <!-- Botón de Comprar -->
+                        <button class="btn btn-comprar w-100">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     </section>
     <div class="video">
         <video width="560" height="315" controls>

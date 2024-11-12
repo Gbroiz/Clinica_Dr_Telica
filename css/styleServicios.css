@@ -173,6 +173,28 @@ body {
     background-color: #f0f0f0 !important;
 }
 
+/*Modal*/
+
+/* Estilo para el carrusel de imágenes */
+.carousel-inner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo para la descripción, precio y otros detalles */
+.modal-precio, .modal-descripcion, .modal-disponibilidad, .modal-galeria, .modal-reseñas {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.modal-reseñas span {
+    font-size: 14px;
+    color: #264A80;
+}
+
 /*Video*/
 
 /* Estilo del contenedor del video */
