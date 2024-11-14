@@ -145,6 +145,12 @@ body {
     transform: translateY(-5px);
 }
 
+/* Ajustamos el contenedor para que las tarjetas se distribuyan correctamente */
+.contenedor {
+    display: grid;
+    gap: 1rem;
+}
+
 /* Estilos de los botones */
 .btn-comprar {
     background-color: #7798C2 !important; /* Color similar al de la imagen */
