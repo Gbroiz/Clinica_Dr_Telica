@@ -291,3 +291,34 @@ body {
         height: auto; /* Ajustar la altura automáticamente */
     }
 }
+/* Asegúrate de que el contenedor tenga suficiente espacio y centrado */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre los cards */
+    justify-content: center; /* Esto centra los cards horizontalmente */
+    padding: 20px; /* Añade un poco de espacio alrededor */
+}
+
+/* Asegura que cada card tenga un tamaño adecuado */
+.card {
+    flex: 1 0 21%; /* Cada card ocupará aproximadamente 21% del contenedor (3-4 cards por fila dependiendo del tamaño de la pantalla) */
+    margin-bottom: 20px;
+    max-width: 18rem; /* Limitar el ancho máximo de las cards */
+}
+
+/* Para pantallas más pequeñas, hacer que las cards se ajusten */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 45%; /* En pantallas pequeñas, se ocuparán dos cards por fila */
+        max-width: 45%; /* Limitar el ancho para adaptarse */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 0 100%; /* En pantallas muy pequeñas, solo una card por fila */
+        max-width: 100%; /* Limitar el ancho al 100% */
+    }
+}
+
