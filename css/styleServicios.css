@@ -120,6 +120,10 @@ body {
     gap: 60px;
     padding: 20px;
     background-color: #ECF4F9;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribuye los cards en varias columnas */
+    justify-items: center; /* Centra los cards */
+    row-gap: 30px; /* Espacio entre filas */
 }
 
 .contenedor-servicios-medicos h5 {
@@ -135,23 +139,38 @@ body {
 }
 
 .cardservicios{
+    width: 100%;
+    height: 420px !important; /* Altura fija para todos los cards */
+    display: flex !important;
+    flex-direction: column !important;
     border: solid rgba(24, 23, 23, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
+    background: white;
+    position: relative !important; /* Para posicionamiento absoluto de botones */
+}
+
+.cardservicios img{
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    height: 200px; /* Fija la altura de la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen y la ajusta al contenedor */
 }
 
 .cardservicios:hover {
     transform: translateY(-5px);
 }
 
-/* Ajustamos el contenedor para que las tarjetas se distribuyan correctamente */
-.contenedor {
-    display: grid;
-    gap: 1rem;
+/* Estilos de los botones */
+
+.card-buttons{
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    display: flex !important;
+    gap: 10px !important;
 }
 
-/* Estilos de los botones */
 .btn-comprar {
     background-color: #7798C2 !important; /* Color similar al de la imagen */
     color: white !important;
