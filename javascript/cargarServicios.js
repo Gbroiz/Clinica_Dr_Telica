@@ -38,6 +38,32 @@ async function cargarServicios() {
                 const comprarButton = document.createElement("button");
                 comprarButton.classList.add("btn", "btn-comprar");
                 comprarButton.textContent = "Comprar";
+
+                // Evento para mostrar el pop-up con SweetAlert2
+                comprarButton.addEventListener("click", () => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Servicio añadido a tu carrito!',
+                        html: `
+                            <p style="font-size: 18px; margin-top: 10px; color: #333;">${servicio.nombre} <span style="font-weight: bold; color: #264A80;">${servicio.precio}</span></p>
+                        `,
+                        confirmButtonText: 'Continuar comprando',
+                        showCancelButton: true,
+                        cancelButtonText: 'Ir al carrito',
+                        buttonsStyling: false,
+                        customClass: {
+                            confirmButton: 'swal2-continue-btn',
+                            cancelButton: 'swal2-cart-btn',
+                            popup: 'swal2-custom-popup'
+                        }
+                    }).then((result) => {
+                        if (result.isDismissed) {
+                            // Redirigir al carrito
+                            window.location.href = '/cart';
+                        }
+                    });
+                });
+
                 buttonContainer.appendChild(comprarButton);
 
                 const verMasButton = document.createElement("button");
@@ -80,6 +106,32 @@ async function cargarServicios() {
                         img.alt = `Imagen ${index + 1}`;
                         carouselItem.appendChild(img);
                         carouselInner.appendChild(carouselItem);
+                    });
+
+                    // Asignar el evento al botón de "Comprar" dentro del modal
+                    const modalComprarButton = document.querySelector(".modal .btn-comprar");
+                    modalComprarButton.addEventListener("click", () => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Servicio añadido a tu carrito!',
+                            html: `
+                                <p style="font-size: 18px; margin-top: 10px; color: #333;">${servicio.nombre} <span style="font-weight: bold; color: #264A80;">${servicio.precio}</span></p>
+                            `,
+                            confirmButtonText: 'Continuar comprando',
+                            showCancelButton: true,
+                            cancelButtonText: 'Ir al carrito',
+                            buttonsStyling: false,
+                            customClass: {
+                                confirmButton: 'swal2-continue-btn',
+                                cancelButton: 'swal2-cart-btn',
+                                popup: 'swal2-custom-popup'
+                            }
+                        }).then((result) => {
+                            if (result.isDismissed) {
+                                // Redirigir al carrito
+                                window.location.href = '/cart';
+                            }
+                        });
                     });
                 });
 

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ECF4F9;
+}
+
+.contenedor-inicio {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding-bottom: 60px;
+}
+
+.img-conocenos {
+    height: 80px; 
+    width: auto; 
+    margin-top: 10px; 
+}
+
+.contenedor-inicio h1 {
+    font-size: 30px; 
+    color: #264A80; 
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-inicio hr {
+    border: 1px solid #D1B74D; 
+    opacity: 1; 
+    width: 65px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.contenedor-inicio-texto {
+    font-weight: 300; 
+    max-width: 130vh;
+    margin: 0 auto;
+}
+
+.card{
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.tarjetas h3{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.tarjetas li{
+    font-weight: 300;
+    margin-top: 7px;
+}
+
