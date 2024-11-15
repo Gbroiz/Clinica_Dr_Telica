@@ -138,17 +138,6 @@ function mostrarServicios(serviciosData, contenedor) {
     });
 }
 
-// Mostrar las categorías en el contenedor adecuado
-function mostrarCategorias(serviciosData) {
-    const categorias = serviciosData.map(categoria => categoria.categoria);
-    categorias.forEach(categoria => {
-        const categoriaElement = document.createElement('a');
-        categoriaElement.href = '#';
-        categoriaElement.innerHTML = `<h5>${categoria}</h5>`;
-        document.querySelector('.card-categorias').appendChild(categoriaElement);
-    });
-}
-
 // Filtrar y mostrar los servicios según la categoría seleccionada
 function filtrarServiciosPorCategoria(categoriaSeleccionada, serviciosData, contenedor) {
     const serviciosFiltrados = serviciosData.reduce((result, categoria) => {
