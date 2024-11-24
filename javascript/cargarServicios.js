@@ -106,6 +106,7 @@ function mostrarServicios(serviciosData, contenedor) {
                 const modalComprarButton = document.querySelector('#detalleModal .btn-comprar');
                 if (modalComprarButton) {
                     modalComprarButton.onclick = () => guardarServicioEnCarrito(servicio);
+                    
                 }
             });
 

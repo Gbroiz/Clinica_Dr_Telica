@@ -25,7 +25,7 @@ function guardarServicioEnCarrito(servicio) {
             }
         }).then((result) => {
             if (result.isDismissed) {
-                window.location.href = '/cart';
+                window.location.href = "carrito.html";
             }
         });
         return;
@@ -64,7 +64,7 @@ function guardarServicioEnCarrito(servicio) {
         }
     }).then((result) => {
         if (result.isDismissed) {
-            window.location.href = '/cart';
+            window.location.href = "carrito.html";
         }
     });
 }

@@ -1,5 +1,4 @@
-/*Encabezado - Nav*/
-
+/* Encabezado - Nav */
 header {
     top: 0;
     position: sticky;
@@ -38,19 +37,22 @@ header {
     color: #264A80; /* Azul para el enlace activo y hover */
 }
 
-/* Estilos para el menú desplegable */
+/* Estilos para el menú desplegable (Dropdown) */
 .dropdown-menu {
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #343a40; /* Fondo oscuro (igual al menú hamburguesa) */
+    border: none; /* Eliminar borde */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
 }
 
 .dropdown-menu .dropdown-item {
-    color: #0C1728;
+    color: white; /* Letra blanca */
+    padding: 10px 15px;
 }
 
 .dropdown-menu .dropdown-item:hover {
-    color: #264A80;
-    background-color: rgba(0, 0, 0, 0.05);
+    color: #264A80; /* Color azul al hacer hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo claro al hacer hover */
 }
 
 .dropdown-item {
@@ -67,59 +69,75 @@ header {
     display: none; /* Oculto en pantallas grandes */
 }
 
-i{
+/* Icono */
+i {
     cursor: pointer;
 }
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Oculta el menú en pantallas pequeñas */
+    /* Oculta el menú en pantallas pequeñas por defecto */
     #navbarNav {
         display: none;
-        position: absolute;
+        position: fixed; /* Fijado en la pantalla */
         top: 80px; /* Distancia desde la parte superior del header */
-        right: 0;
-        background-color: rgba(52, 58, 64, 0.95);
-        width: 100%;
-        padding: 20px;
-        border-radius: 0 0 5px 5px;
-        text-align: center;
-        z-index: 1000;
+        left: 0; /* Alineado a la izquierda */
+        background-color: #343a40; /* Fondo oscuro, sin transparencia */
+        width: 100vw; /* Asegura que ocupe todo el ancho de la pantalla */
+        padding: 10px; /* Reduce el padding */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        text-align: center; /* Centra los elementos dentro del menú */
+        border-radius: 0 0 5px 5px; /* Esquinas redondeadas */
+        overflow-y: auto; /* Permite desplazarse si es necesario */
+        max-height: 50vh; /* Limita la altura máxima del menú (ajustado aún más) */
     }
 
+    /* Flexbox para los elementos dentro del menú */
     #navbarNav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 10px; /* Espaciado entre elementos */
         list-style-type: none;
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start; /* Alinea los elementos a la izquierda */
         align-items: center;
     }
 
-    /* Muestra el botón hamburguesa */
+    /* Mostrar el botón hamburguesa */
     .menu-btn {
         display: block;
     }
 
-    /* Muestra el menú cuando se activa */
+    /* Mostrar el menú cuando se activa */
     #navbarNav.active {
         display: block;
     }
 
-    /* Enlaces en el menú hamburguesa */
+    /* Estilo de los enlaces dentro del menú hamburguesa */
     #navbarNav a {
         color: white;
+        font-size: 18px; /* Aumenta el tamaño del texto */
+        padding: 15px 0; /* Espaciado entre los enlaces */
+        width: 100%; /* Hace que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centra el texto */
+        text-decoration: none;
         transition: color 0.3s ease;
     }
 
+    /* Efecto hover para los enlaces */
     #navbarNav a:hover {
         color: #264A80; /* Azul al pasar el ratón sobre los enlaces */
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo más claro */
     }
 
     /* Enlace activo en el menú hamburguesa */
     #navbarNav a.active {
         color: #264A80; /* Azul para el enlace activo */
+    }
+
+    /* Estilo del carrito en el menú hamburguesa */
+    .navbar-nav .nav-item .nav-link .fas.fa-shopping-cart {
+        margin-right: 10px;
     }
 }
