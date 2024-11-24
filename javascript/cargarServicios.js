@@ -4,18 +4,14 @@ async function cargarServicios() {
         const data = await response.json();
         const contenedor = document.querySelector(".contenedor");
 
-        // Verificar si el contenedor existe
         if (!contenedor) {
             console.error("Contenedor no encontrado en el DOM");
             return;
         }
 
         let serviciosData = data.servicios;
-
-        // Mostrar todos los servicios al inicio
         mostrarServicios(serviciosData, contenedor);
 
-        // Asignar eventos a las categorías para filtrar servicios
         const categoriaCards = document.querySelectorAll('.card-categorias a');
         categoriaCards.forEach(card => {
             card.addEventListener('click', (e) => {
@@ -30,9 +26,8 @@ async function cargarServicios() {
     }
 }
 
-// Mostrar todos los servicios
 function mostrarServicios(serviciosData, contenedor) {
-    contenedor.innerHTML = ''; // Limpiar el contenedor antes de cargar los servicios
+    contenedor.innerHTML = '';
 
     serviciosData.forEach(categoria => {
         categoria.servicios.forEach(servicio => {
@@ -65,6 +60,9 @@ function mostrarServicios(serviciosData, contenedor) {
             const comprarButton = document.createElement("button");
             comprarButton.classList.add("btn", "btn-comprar");
             comprarButton.textContent = "Comprar";
+            comprarButton.addEventListener("click", () => {
+                guardarServicioEnCarrito(servicio);
+            });
             buttonContainer.appendChild(comprarButton);
 
             const verMasButton = document.createElement("button");
@@ -87,7 +85,6 @@ function mostrarServicios(serviciosData, contenedor) {
                     </ul>
                 `;
                 document.querySelector(".modal-opciones").innerHTML = opcionesHtml;
-
                 document.querySelector(".modal-garantia").innerHTML = `<strong>Garantía del servicio:</strong> ${servicio.garantia}`;
 
                 const carouselInner = document.querySelector(".carousel-inner");
@@ -104,30 +101,12 @@ function mostrarServicios(serviciosData, contenedor) {
                     carouselItem.appendChild(img);
                     carouselInner.appendChild(carouselItem);
                 });
-            });
 
-            // Asignar el evento al botón de "Comprar" dentro de la tarjeta
-            comprarButton.addEventListener("click", () => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Servicio añadido a tu carrito!',
-                    html: `
-                        <p style="font-size: 18px; margin-top: 10px; color: #333;">${servicio.nombre} <span style="font-weight: bold; color: #264A80;">${servicio.precio}</span></p>
-                    `,
-                    confirmButtonText: 'Continuar comprando',
-                    showCancelButton: true,
-                    cancelButtonText: 'Ir al carrito',
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: 'swal2-continue-btn',
-                        cancelButton: 'swal2-cart-btn',
-                        popup: 'swal2-custom-popup'
-                    }
-                }).then((result) => {
-                    if (result.isDismissed) {
-                        window.location.href = '/cart';
-                    }
-                });
+                // Agregar evento al botón comprar del modal
+                const modalComprarButton = document.querySelector('#detalleModal .btn-comprar');
+                if (modalComprarButton) {
+                    modalComprarButton.onclick = () => guardarServicioEnCarrito(servicio);
+                }
             });
 
             buttonContainer.appendChild(verMasButton);
@@ -138,7 +117,6 @@ function mostrarServicios(serviciosData, contenedor) {
     });
 }
 
-// Filtrar y mostrar los servicios según la categoría seleccionada
 function filtrarServiciosPorCategoria(categoriaSeleccionada, serviciosData, contenedor) {
     const serviciosFiltrados = serviciosData.reduce((result, categoria) => {
         if (categoria.categoria === categoriaSeleccionada) {
@@ -150,5 +128,4 @@ function filtrarServiciosPorCategoria(categoriaSeleccionada, serviciosData, cont
     mostrarServicios([{categoria: categoriaSeleccionada, servicios: serviciosFiltrados}], contenedor);
 }
 
-// Llamar a la función cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", cargarServicios);
