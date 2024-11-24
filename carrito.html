@@ -11,14 +11,13 @@
         content="medicina general, ginecología, psicología, ultrasonidos, rayos X, salud, bienestar, Puerto Viejo, La Virgen, Sarapiquí, Clínica Dr. Télica">
     <meta name="author" content="Gabriela Brenes Roiz">
     <title>Clínica Dr. Télica</title>
-    <link rel="stylesheet" href="css/stylePoliticasInfo.css">
-    <link rel="stylesheet" href="css/styleHeader.css">
-    <link rel="stylesheet" href="css/styleFooter.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" href="img/Icono-Clinica-Dr.Telica.ico" type="clinica_dr.telica-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styleCarrito.css">
+    <link rel="stylesheet" href="css/styleHeader.css">
+    <link rel="stylesheet" href="css/styleFooter.css">
+    <link rel="icon" href="img/Icono-Clinica-Dr.Telica.ico" type="clinica_dr.telica-icon">
 </head>
 
 <body>
@@ -27,7 +26,6 @@
             <img src="img/Logo Clínica Dr.Larry Télica.png" alt="Logo Clínica Dr. Larry Télica"
                 class="logo_clinica_dr_telica">
         </div>
-
         <!-- Menú de navegación -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -76,48 +74,113 @@
         </nav>
     </header>
     <section class="contenedor-inicio">
-        <img class="img-conocenos" src="img/Nosotros/Sobre nosotros.png" alt="Icono sobre nosotros">
-        <h1>Política de Atención al Paciente</h1>
+        <img class="img-carrito" src="img/Carrito compras.png" alt="Icono carrito compras">
+        <h1>Carro de Compras</h1>
         <hr>
-        <div class="contenedor-inicio-texto">
-            <p> En la Clínica Dr. Télica, nos comprometemos a ofrecer atención médica de calidad, asegurando el respeto,
-                la confidencialidad y el bienestar de nuestros pacientes. Nuestras políticas garantizan una atención
-                ética, profesional y personalizada en todo momento.
-            </p>
-        </div>
     </section>
-    <section class="contenedor-condiciones">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-5 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body tarjetas">
-                            <h3 class="card-title">Condiciones de Cita</h3>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle" style="color: #7798C2;"></i> Presentarse 15 minutos
-                                    antes de la cita.</li>
-                                <li><i class="bi bi-check-circle" style="color: #7798C2;"></i> Cualquier cancelación
-                                    debe realizarse 24 horas antes.</li>
-                            </ul>
+    <section class = "contenedor-carrito">
+        <!-- Contenedor principal -->
+    <div class="contenedor-servicios">
+        <div class="row">
+            <!-- Columna de servicios -->
+            <div class="col-lg-8">
+                <div class="tarjeta-servicio">
+                    <h5 class="mb-4">Servicios seleccionados</h5>
+                    <hr class = "separador-perm">
+                    <!-- Servicio 1 -->
+                    <div class="borde-inferior espaciado-vertical">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="etiqueta-categoria">Medicina General</span>
+                                <h6 class="titulo-servicio">Consulta General</h6>
+                                <p class="descripcion-servicio">Consulta médica general de rutina</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="controles-cantidad">
+                                        <span class="cantidad">1</span>
+                                    </div>
+                                    <button class="boton-eliminar">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="texto-end">
+                                <span class="precio-servicio">₡35,000</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-5 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body tarjetas">
-                            <h3 class="card-title">Condiciones de Pago</h3>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle" style="color: #7798C2;"></i> Aceptamos efectivo y
-                                    tarjetas.</li>
-                                <li><i class="bi bi-check-circle" style="color: #7798C2;"></i> Los pagos deben
-                                    realizarse antes de la consulta.</li>
-                            </ul>
+
+                    <!-- Servicio 2 -->
+                    <div class="borde-inferior espaciado-vertical">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="etiqueta-categoria">Ginecología</span>
+                                <h6 class="titulo-servicio">Ultrasonido Ginecológico</h6>
+                                <p class="descripcion-servicio">Ultrasonido ginecológico completo</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="controles-cantidad">
+                                        <span class="cantidad">1</span>
+                                    </div>
+                                    <button class="boton-eliminar">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="texto-end">
+                                <span class="precio-servicio">₡45,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="espaciado-vertical">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="etiqueta-categoria">Psicología</span>
+                                <h6 class="titulo-servicio">Terapia Individual</h6>
+                                <p class="descripcion-servicio">Sesión de terapia psicológica individual</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="controles-cantidad">
+                                        <span class="cantidad">1</span>
+                                    </div>
+                                    <button class="boton-eliminar">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="texto-end">
+                                <span class="precio-servicio">₡40,000</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Columna del resumen -->
+            <div class="col-lg-4">
+                <div class="resumen-carrito">
+                    <h5>Resumen del pedido</h5>
+                    <hr class = "separador-perm">
+                    <div class="linea-resumen">
+                        <span class="texto-muted">Subtotal</span>
+                        <span class="texto-negrita">₡120,000</span>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="linea-resumen">
+                        <span class="texto-negrita">Total</span>
+                        <span class="precio-servicio">₡120,000</span>
+                    </div>
+                    
+                    <button class="boton-pagar mt-4">
+                        Proceder al pago
+                    </button>
+                </div>
+            </div>
         </div>
+    </div>
     </section>
+    </div>
     <footer>
         <div class="div-footer">
             <div class="footer-informacion">
@@ -173,7 +236,6 @@
         crossorigin="anonymous"></script>
 
     <script src="javascript/menuHamburguesa.js"></script>
-
 </body>
 
 </html>

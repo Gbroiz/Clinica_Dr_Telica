@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ECF4F9;
+}
+
+.contenedor-inicio {
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.img-carrito {
+    height: 80px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.contenedor-inicio h1 {
+    font-size: 30px;
+    color: #264A80;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.contenedor-inicio hr {
+    border: 1px solid #D1B74D;
+    opacity: 1;
+    width: 65px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.separador-perm{
+    border: 1px solid #D1B74D;
+    opacity: 1;
+    width: 65px;
+    margin-top: -15px;
+    margin-bottom: 22px;
+}
+
+/* Contenedor de servicios */
+.contenedor-servicios {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-servicio h5{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Tarjetas de servicios */
+.tarjeta-servicio {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.etiqueta-categoria {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.titulo-servicio {
+    color: #264A80;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.descripcion-servicio {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.precio-servicio {
+    color: #264A80;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Controles de cantidad */
+.controles-cantidad {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.controles-cantidad button {
+    background: none;
+    border: none;
+    padding: 5px 15px;
+    color: #264A80;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.controles-cantidad button:hover {
+    background-color: #f8f9fa;
+}
+
+.controles-cantidad span {
+    padding: 0 15px;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Botón eliminar */
+.boton-eliminar {
+    color: #dc3545;
+    border: none;
+    background: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.boton-eliminar:hover {
+    color: #c82333;
+}
+
+/* Resumen del carrito */
+.resumen-carrito {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.resumen-carrito h5 {
+    color: #264A80;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.linea-resumen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.texto-muted {
+    color: #6c757d;
+}
+
+.texto-negrita {
+    font-weight: 600;
+}
+
+/* Botón de pago */
+.boton-pagar {
+    background-color: #D1B74D;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton-pagar:hover {
+    background-color: #7798C2;
+}
+
+/* Divisores */
+.borde-inferior {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Espaciado */
+.espaciado-vertical {
+    margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-servicios {
+        padding: 20px 10px;
+    }
+    
+    .tarjeta-servicio {
+        padding: 15px;
+    }
+    
+    .controles-cantidad button {
+        padding: 5px 10px;
+    }
+    
+    .resumen-carrito {
+        margin-top: 20px;
+        position: static;
+    }
+}

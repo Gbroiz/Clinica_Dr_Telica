@@ -26,20 +26,51 @@
             <img src="img/Logo Clínica Dr.Larry Télica.png" alt="Logo Clínica Dr. Larry Télica"
                 class="logo_clinica_dr_telica">
         </div>
-        <!-- Botón de menú hamburguesa -->
-        <button class="menu-btn" id="menuBtn">&#9776;</button>
-        
         <!-- Menú de navegación -->
-        <nav id="menu" class="nav-links">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a class="activo" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
-                <li><a href="acerca_de.html">Acerca de</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Botón hamburguesa -->
+                <button class="menu-btn" id="menuBtn">&#9776;</button>
+
+                <!-- Enlaces del menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nosotrosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nosotrosDropdown">
+                                <li><a class="dropdown-item" href="nosotros.html">Quiénes Somos</a></li>
+                                <li><a class="dropdown-item" href="preguntas_frecuentes.html">Preguntas Frecuentes</a>
+                                <li><a class="dropdown-item" href="acerca_de.html">Acerca de</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center ms-3">
+                    <a class="nav-link me-2 position-relative">
+                        <i class="fas fa-shopping-cart fa-lg text-black" style="color: #264A80 !important;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill border border-dark bg-white text-dark d-none">
+                            0
+                            <span class="visually-hidden">Cantidad</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
     <section class="contenedor-inicio">
@@ -54,7 +85,7 @@
                 informado en cada paso de tu atención.</p>
         </div>
     </section>
-    <section class="contenedor-acordion-preguntas" id = "preguntas-frecuentes">
+    <section class="contenedor-acordion-preguntas" id="preguntas-frecuentes">
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
@@ -66,11 +97,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body accordion-respuesta">
-                        Ofrecemos atención médica integral, incluyendo consultas generales, diagnóstico y tratamiento de enfermedades comunes, así como chequeos preventivos para todas las edades.
+                        Ofrecemos atención médica integral, incluyendo consultas generales, diagnóstico y tratamiento de
+                        enfermedades comunes, así como chequeos preventivos para todas las edades.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -81,11 +113,13 @@
                 </h2>
                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Se recomienda realizar un chequeo médico general al menos una vez al año, o según las indicaciones de tu médico, especialmente si tienes antecedentes familiares de enfermedades crónicas.
+                        Se recomienda realizar un chequeo médico general al menos una vez al año, o según las
+                        indicaciones de tu médico, especialmente si tienes antecedentes familiares de enfermedades
+                        crónicas.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -96,11 +130,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Es recomendable llegar en ayunas de al menos 6 horas antes del examen y beber agua sin vaciar la vejiga para obtener mejores imágenes durante el ultrasonido.
+                        Es recomendable llegar en ayunas de al menos 6 horas antes del examen y beber agua sin vaciar la
+                        vejiga para obtener mejores imágenes durante el ultrasonido.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -111,11 +146,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        El procedimiento generalmente dura entre 15 y 30 minutos, dependiendo del tipo de ecografía que se esté realizando.
+                        El procedimiento generalmente dura entre 15 y 30 minutos, dependiendo del tipo de ecografía que
+                        se esté realizando.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -126,11 +162,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Sí, contamos con un equipo de psicólogos especializados que brindan atención en áreas como el manejo del estrés, ansiedad, terapia familiar, y apoyo en crisis emocionales.
+                        Sí, contamos con un equipo de psicólogos especializados que brindan atención en áreas como el
+                        manejo del estrés, ansiedad, terapia familiar, y apoyo en crisis emocionales.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -141,11 +178,13 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        En tu primera consulta es importante que traigas tu identificación, cualquier referencia médica si es aplicable, y, si lo deseas, una lista de los temas que te gustaría tratar durante la sesión.
+                        En tu primera consulta es importante que traigas tu identificación, cualquier referencia médica
+                        si es aplicable, y, si lo deseas, una lista de los temas que te gustaría tratar durante la
+                        sesión.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -156,11 +195,13 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Puedes agendar una cita llamándonos directamente, a través de nuestra página web, o visitando la clínica en persona. Nuestro equipo te ayudará a elegir el especialista adecuado según tus necesidades.
+                        Puedes agendar una cita llamándonos directamente, a través de nuestra página web, o visitando la
+                        clínica en persona. Nuestro equipo te ayudará a elegir el especialista adecuado según tus
+                        necesidades.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -171,11 +212,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Realizamos ultrasonidos abdominales, pélvicos, obstétricos, tiroideos, entre otros, para el diagnóstico y monitoreo de diversas condiciones médicas.
+                        Realizamos ultrasonidos abdominales, pélvicos, obstétricos, tiroideos, entre otros, para el
+                        diagnóstico y monitoreo de diversas condiciones médicas.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -186,11 +228,12 @@
                 </h2>
                 <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Aceptamos pagos en efectivo, tarjetas de crédito y débito, así como transferencias bancarias. También trabajamos con varios seguros médicos privados.
+                        Aceptamos pagos en efectivo, tarjetas de crédito y débito, así como transferencias bancarias.
+                        También trabajamos con varios seguros médicos privados.
                     </div>
                 </div>
             </div>
-    
+
             <div class="accordion-item">
                 <h2 class="accordion-header accordion-pregunta">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -201,17 +244,21 @@
                 </h2>
                 <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
                     <div class="accordion-body accordion-respuesta">
-                        Para una consulta médica general no es necesaria una preparación especial, aunque es recomendable traer un registro de cualquier medicamento que estés tomando, así como tu historial médico.
+                        Para una consulta médica general no es necesaria una preparación especial, aunque es
+                        recomendable traer un registro de cualquier medicamento que estés tomando, así como tu historial
+                        médico.
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="div-footer">
             <div class="footer-informacion">
-                <a href="tel:+50627665482"><p><strong>Teléfono:</strong> 2766-5482</p></a>
+                <a href="tel:+50627665482">
+                    <p><strong>Teléfono:</strong> 2766-5482</p>
+                </a>
                 <p><strong>Horario de apertura:</strong></p>
                 <ul>
                     <li><a>Lunes a Viernes: 09:30 - 12:00, 13:00 - 18:00</a></li>
@@ -250,7 +297,8 @@
                 <hr>
                 <p>
                     <a href="https://www.facebook.com/clinicadrtelica"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://api.whatsapp.com/send/?phone=50687160020"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=50687160020"><i
+                            class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
                 </p>
             </div>
         </div>
@@ -259,13 +307,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 
-        <script>const menuBtn = document.getElementById('menuBtn');
-            const navLinks = document.getElementById('menu');
-            
-            // Añadimos el evento de clic para alternar la clase "active" en el menú
-            menuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });</script>
+    <script src="javascript/menuHamburguesa.js"></script>
 </body>
 
 </html>

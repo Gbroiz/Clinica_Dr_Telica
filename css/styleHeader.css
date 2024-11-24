@@ -21,68 +21,60 @@ header {
 
 .logo_clinica_dr_telica {
     max-height: 140px;
-    /* Establece un máximo de altura */
     width: auto;
-    /* Mantiene la proporción del logo */
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    margin-top: 14px;
-    gap: 2px !important;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    font-size: 14px;
+/* Estilos para los enlaces del menú */
+.navbar-nav .nav-link {
     color: #0C1728;
-    transition: color 0.3s ease;
+    font-size: 14px;
     font-weight: 500;
-    margin-left: 4px;
+    transition: color 0.3s ease;
 }
 
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    /* Para que la línea quede justo debajo del texto */
-    height: 2px;
-    width: 0;
-    background-color: #264A80;
-    transition: width 0.3s ease;
+/* Estado activo y hover de los enlaces del menú */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #264A80; /* Azul para el enlace activo y hover */
 }
 
-nav ul li a:hover::after,
-nav ul li a.activo::after {
-    width: 100%;
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-nav ul li a:hover {
+.dropdown-menu .dropdown-item {
+    color: #0C1728;
+}
+
+.dropdown-menu .dropdown-item:hover {
     color: #264A80;
-    /* Cambia el color del texto al hacer hover */
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+    font-size: 14px;
 }
 
 /* Botón de menú hamburguesa */
 .menu-btn {
     font-size: 24px;
-    color: rgb(7, 7, 7); /* Color del botón de menú hamburguesa */
+    color: rgb(7, 7, 7);
     background: none;
     border: none;
     cursor: pointer;
     display: none; /* Oculto en pantallas grandes */
 }
 
+i{
+    cursor: pointer;
+}
+
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Oculta el menú en pantallas pequeñas */
-    .nav-links {
+    #navbarNav {
         display: none;
         position: absolute;
         top: 80px; /* Distancia desde la parte superior del header */
@@ -92,18 +84,18 @@ nav ul li a:hover {
         padding: 20px;
         border-radius: 0 0 5px 5px;
         text-align: center;
-        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        z-index: 1000;
     }
 
-    .nav-links ul {
+    #navbarNav ul {
         flex-direction: column;
         gap: 10px;
-        list-style-type: none; /* Elimina los puntos de la lista */
-        padding: 0; /* Elimina el padding por defecto */
-        margin: 0; /* Elimina el margen por defecto */
-        display: flex; /* Usar flexbox para el centramiento */
-        justify-content: center; /* Centra los elementos horizontalmente */
-        align-items: center; /* Centra los elementos verticalmente si es necesario */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /* Muestra el botón hamburguesa */
@@ -112,16 +104,22 @@ nav ul li a:hover {
     }
 
     /* Muestra el menú cuando se activa */
-    .nav-links.active {
+    #navbarNav.active {
         display: block;
     }
 
-    /* Enlaces en el menú desplegable */
-    .nav-links a {
-        color: white; /* Texto blanco en el menú hamburguesa */
+    /* Enlaces en el menú hamburguesa */
+    #navbarNav a {
+        color: white;
+        transition: color 0.3s ease;
     }
 
-    .nav-links a:hover {
-        color: #ddd; /* Color al pasar el ratón */
+    #navbarNav a:hover {
+        color: #264A80; /* Azul al pasar el ratón sobre los enlaces */
+    }
+
+    /* Enlace activo en el menú hamburguesa */
+    #navbarNav a.active {
+        color: #264A80; /* Azul para el enlace activo */
     }
 }
