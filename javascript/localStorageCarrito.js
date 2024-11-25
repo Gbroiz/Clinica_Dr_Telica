@@ -34,11 +34,12 @@ function guardarServicioEnCarrito(servicio) {
     const nuevoServicio = {
         id: Date.now(),
         nombre: servicio.nombre,
-        precio: servicio.precio,
+        precio: parseInt(servicio.precio.replace(/[^\d]/g, '')),
         imagen: servicio.imagenes[0],
         cantidad: 1,
         disponibilidad: servicio.disponibilidad,
-        descripcion: servicio.descripcion
+        descripcion: servicio.descripcion,
+        categoria: servicio.categoria
     };
 
     serviciosEnCarrito.push(nuevoServicio);
