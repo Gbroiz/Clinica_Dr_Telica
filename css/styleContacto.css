@@ -111,23 +111,23 @@ form {
 }
 
 .rdb-genero:checked {
-    background-color: #7798C2;
-    border-color: #7798C2;
+    background-color: #7798C2 !important;
+    border-color: #7798C2 !important;
 }
 
 .btn-enviar {
-    background-color: #D1B74D;
-    border-color: #D1B74D;
+    background-color: #D1B74D !important;
+    border-color: #D1B74D !important;
 }
 
 .btn-enviar:hover {
-    background-color: #7798C2;
-    border-color: #7798C2;
+    background-color: #7798C2 !important;
+    border-color: #7798C2 !important;
 }
 
 .form-control-sm:focus {
-    border-color: #7798C2; 
-    box-shadow: 0 0 5px  #7798C2; 
+    border-color: #7798C2 !important; 
+    box-shadow: 0 0 5px  #7798C2 !important; 
 }
 
 /* Responsivo para pantallas pequeñas */

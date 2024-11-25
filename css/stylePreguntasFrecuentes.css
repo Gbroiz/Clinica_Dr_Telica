@@ -56,8 +56,8 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-    color: rgb(255, 255, 255);
-    background-color:  #7798C2; 
+    color: rgb(255, 255, 255) !important;
+    background-color:  #7798C2 !important; 
 }
 
 /*Footer*/

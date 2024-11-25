@@ -26,23 +26,19 @@
             <img src="img/Logo Clínica Dr.Larry Télica.png" alt="Logo Clínica Dr. Larry Télica"
                 class="logo_clinica_dr_telica">
         </div>
-
         <!-- Menú de navegación -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <!-- Botón hamburguesa -->
-                <button class="menu-btn navbar-toggler" id="menuBtn" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
+                <button class="menu-btn" id="menuBtn">&#9776;</button>
+
                 <!-- Enlaces del menú -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
+
                         <li class="nav-item active">
                             <a class="nav-link" href="servicios.html">Servicios</a>
                         </li>
@@ -59,22 +55,23 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="nosotrosDropdown">
                                 <li><a class="dropdown-item" href="nosotros.html">Quiénes Somos</a></li>
-                                <li><a class="dropdown-item" href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                                <li><a class="dropdown-item" href="preguntas_frecuentes.html">Preguntas Frecuentes</a>
                                 <li><a class="dropdown-item" href="acerca_de.html">Acerca de</a></li>
                             </ul>
                         </li>
-                        <!-- Ícono del carrito -->
-                        <li class="nav-item">
-                            <a class="nav-link position-relative" href="carrito.html" id="carritoLink">
-                                <i class="fas fa-shopping-cart fa-lg text-black" style="color: #264A80 !important;"></i>
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill border border-dark bg-white text-dark d-none">
-                                    0
-                                    <span class="visually-hidden">Cantidad</span>
-                                </span>
-                            </a>
-                        </li>
                     </ul>
+                    </li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center ms-3">
+                    <a class="nav-link me-2 position-relative" href="carrito.html" id="carritoLink">
+                        <i class="fas fa-shopping-cart fa-lg text-black" style="color: #264A80 !important;"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill border border-dark bg-white text-dark d-none">
+                            0
+                            <span class="visually-hidden">Cantidad</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </nav>

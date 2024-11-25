@@ -55,14 +55,14 @@ body {
 }
 
 .btn-contactar {
-    background-color: #D1B74D;
-    color: white;
-    border: none; 
-    padding: 10px 20px; 
-    text-align: center; 
+    background-color: #D1B74D !important;
+    color: white !important;
+    border: none !important; 
+    padding: 10px 20px !important; 
+    text-align: center !important; 
 }
 
 .btn-contactar:hover {
-    background-color: #7798C2; 
+    background-color: #7798C2 ; 
     color: white; 
 }
