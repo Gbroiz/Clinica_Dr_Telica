@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="precio-servicio">₡${subtotal.toLocaleString() || '0'}</span>
                 </div>
                 
-                <button class="boton-pagar mt-4">
-                    Proceder al pago
-                </button>
+                <a href="pago.html"><button class="boton-pagar mt-4">
+
+                            Proceder al pago</button></a>
             </div>
         `;
     }
