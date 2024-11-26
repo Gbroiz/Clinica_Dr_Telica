@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #ECF4F9;
+    background-color: #ECF4F9 !important;
 }
 
 .contenedor-inicio {

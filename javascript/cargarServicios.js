@@ -1,3 +1,5 @@
+let serviciosData;
+
 async function cargarServicios() {
     try {
         const response = await fetch("json/servicios.json");
@@ -9,7 +11,7 @@ async function cargarServicios() {
             return;
         }
 
-        let serviciosData = data.servicios;
+        serviciosData = data.servicios;  
         mostrarServicios(serviciosData, contenedor);
 
         const categoriaCards = document.querySelectorAll('.card-categorias a');
@@ -73,7 +75,13 @@ function mostrarServicios(serviciosData, contenedor) {
 
             verMasButton.addEventListener("click", () => {
                 document.querySelector("#detalleModalLabel").textContent = servicio.nombre;
-                document.querySelector(".modal-precio").textContent = `Precio: ${servicio.precio}`;
+
+                const precioFormateado = new Intl.NumberFormat('es-CR', { //cambiar el formato del precio
+                    style: 'decimal',
+                    useGrouping: true,
+                }).format(servicio.precio);
+
+                document.querySelector(".modal-precio").textContent = `Precio: ₡${precioFormateado}`;
                 document.querySelector(".modal-disponibilidad").innerHTML = `<strong>Disponibilidad:</strong> ${servicio.disponibilidad}`;
                 document.querySelector(".modal-descripcion").innerHTML = `<strong>Descripción:</strong> ${servicio.descripcion}`;
                 document.querySelector(".modal-tiempos").innerHTML = `<strong>Tiempos de atención:</strong> ${servicio.tiempoAtencion}`;

@@ -31,6 +31,11 @@ function guardarServicioEnCarrito(servicio) {
         return;
     }
 
+    // Buscar la categoría del servicio
+    const categoriaDelServicio = serviciosData.find(categoria => 
+        categoria.servicios.some(s => s.nombre === servicio.nombre)
+    )?.categoria || 'Error categoría';
+
     const nuevoServicio = {
         id: Date.now(),
         nombre: servicio.nombre,
@@ -39,19 +44,24 @@ function guardarServicioEnCarrito(servicio) {
         cantidad: 1,
         disponibilidad: servicio.disponibilidad,
         descripcion: servicio.descripcion,
-        categoria: servicio.categoria
+        categoria: categoriaDelServicio
     };
 
     serviciosEnCarrito.push(nuevoServicio);
     localStorage.setItem('serviciosCarrito', JSON.stringify(serviciosEnCarrito));
     actualizarContadorCarrito();
 
+    const precioFormateado = new Intl.NumberFormat('es-CR', { //cambiar el formato del precio
+        style: 'decimal',
+        useGrouping: true,
+    }).format(servicio.precio);
+
     Swal.fire({
         icon: 'success',
         title: 'Servicio añadido a tu carrito!',
         html: `
             <p style="font-size: 18px; margin-top: 10px; color: #333;">
-                ${servicio.nombre} <span style="font-weight: bold; color: #264A80;">${servicio.precio}</span>
+                ${servicio.nombre} <span style="font-weight: bold; color: #264A80;">₡${precioFormateado}</span>
             </p>
         `,
         confirmButtonText: 'Continuar comprando',

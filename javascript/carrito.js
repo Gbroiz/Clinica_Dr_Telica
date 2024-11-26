@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         serviciosEnCarrito.splice(index, 1); // Eliminar el servicio por su índice
         localStorage.setItem('serviciosCarrito', JSON.stringify(serviciosEnCarrito)); // Guardar cambios en localStorage
         renderizarCarrito();  // Volver a renderizar el carrito
+        actualizarContadorCarrito(); // Actualizar el contador del carrito
     }
 
     // Evento para controlar los botones dinámicos
