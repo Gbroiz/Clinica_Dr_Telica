@@ -43,6 +43,7 @@ header {
     border: none; /* Eliminar borde */
     border-radius: 5px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    
 }
 
 .dropdown-menu .dropdown-item {
@@ -89,16 +90,16 @@ i {
         text-align: center; /* Centra los elementos dentro del menú */
         border-radius: 0 0 5px 5px; /* Esquinas redondeadas */
         overflow-y: auto; /* Permite desplazarse si es necesario */
-        max-height: 50vh; /* Limita la altura máxima del menú (ajustado aún más) */
-
-        
+        height: 60vh; /* Ajusta la altura del menú a 60% de la altura de la pantalla */
     }
+
     .dropdown-menu {
         background-color: #343a40 !important; /* Fondo oscuro (igual al menú hamburguesa) */
         border: none; /* Eliminar borde */
         border-radius: 5px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
     }
+
     /* Flexbox para los elementos dentro del menú */
     #navbarNav ul {
         flex-direction: column;
@@ -147,4 +148,18 @@ i {
     .navbar-nav .nav-item .nav-link .fas.fa-shopping-cart {
         margin-right: 10px;
     }
+}
+
+/* Aseguramos que el carrito esté antes que el menú hamburguesa */
+.navbar .d-flex.d-lg-none {
+    order: -1; /* El carrito aparece primero */
+}
+
+.menu-btn {
+    order: 1; /* El menú hamburguesa aparece después del carrito */
+}
+
+/* Agregar espacio entre el carrito y el menú hamburguesa */
+.navbar .d-flex.align-items-center.ms-3 {
+    margin-right: 10px; /* Margen entre el carrito y el menú */
 }
