@@ -340,4 +340,34 @@ body {
         max-width: 100%; /* Limitar el ancho al 100% */
     }
 }
+.contenedor-categorias-servicios {
+    padding: 2rem 0;
+    text-align: center; /* Asegura que todo el contenido esté centrado */
+}
 
+.card-categorias img {
+    display: block; /* Corrige posibles problemas de alineación con inline-block */
+    margin: 0 auto; /* Centra las imágenes */
+    max-width: 80%; /* Ajusta el tamaño en pantallas pequeñas */
+}
+
+.card-categorias h5 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.row {
+    margin-left: 0 !important; /* Elimina márgenes laterales que puedan empujar el contenido */
+    margin-right: 0 !important;
+    transform: translateX(-10px); /* Ajusta el contenido ligeramente a la izquierda */
+}
+
+@media (max-width: 576px) {
+    .contenedor-categorias-servicios {
+        padding: 1.5rem 0;
+    }
+    .card-categorias img {
+        max-width: 100%; /* Amplía las imágenes para pantallas más pequeñas */
+    }
+}
