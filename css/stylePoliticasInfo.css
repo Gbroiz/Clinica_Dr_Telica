@@ -13,7 +13,7 @@ body {
 
 .contenedor-inicio {
     text-align: center;
-    padding: 40px;
+    padding: 15px;
     background-color: white;
     display: flex;
     flex-direction: column; 
@@ -69,3 +69,6 @@ body {
     margin-top: 7px;
 }
 
+.contenedor-condiciones{
+    padding: 110px 20px !important;
+}

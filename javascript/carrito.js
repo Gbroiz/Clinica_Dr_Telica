@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <hr class="separador-perm">
                 <div class="linea-resumen">
                     <span class="texto-muted">Subtotal</span>
-                    <span class="texto-negrita">₡${subtotal.toLocaleString() || '0'}</span>
+                    <span class="texto-muted">₡${subtotal.toLocaleString() || '0'}</span>
                 </div>
                 
                 <hr>
@@ -70,11 +70,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="precio-servicio">₡${subtotal.toLocaleString() || '0'}</span>
                 </div>
                 
-                <a href="pago.html"><button class="boton-pagar mt-4">
-
-                            Proceder al pago</button></a>
+                <a href="javascript:void(0);" id="pagar-btn"><button class="boton-pagar mt-4">
+                    Proceder al pago
+                </button></a>
             </div>
         `;
+
+        // Añadir el evento de pago
+        document.getElementById('pagar-btn').addEventListener('click', () => {
+            if (serviciosEnCarrito.length === 0) {
+                // Si el carrito está vacío, mostrar una alerta con SweetAlert
+                Swal.fire({
+                    title: 'Carrito vacío',
+                    text: 'No puedes proceder al pago si tu carrito está vacío.',
+                    icon: 'warning',
+                    confirmButtonText: 'Entendido'
+                });
+            } else {
+                window.location.href = 'pago.html';  // Proceder al pago si el carrito no está vacío
+            }
+        });
     }
 
     // Función para eliminar un servicio

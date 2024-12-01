@@ -52,7 +52,7 @@ body {
 
 /* Contenedor de servicios */
 .contenedor-servicios {
-    padding: 40px 20px;
+    padding: 150px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -151,7 +151,7 @@ body {
 }
 
 .resumen-carrito h5 {
-    color: #264A80;
+    color: #264A80 !important;
     margin-bottom: 1.5rem;
     font-weight: bold;
     font-size: 22px;
@@ -164,11 +164,11 @@ body {
 }
 
 .texto-muted {
-    color: #6c757d;
+    color: #6c757d !important;
 }
 
 .texto-negrita {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 /* Botón de pago */

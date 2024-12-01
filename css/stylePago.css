@@ -176,3 +176,15 @@ body {
     margin-top: 30px;
     height: 30px;
 }
+
+/* Estilo para el botón personalizado en SweetAlert */
+.swal2-confirm-btn {
+    background-color: #7798C2 !important;
+    color: white !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    width: 100%; /* Asegura que el botón de continuar ocupe el 100% del ancho */
+    margin-bottom: 10px; /* Espacio entre los botones */
+}

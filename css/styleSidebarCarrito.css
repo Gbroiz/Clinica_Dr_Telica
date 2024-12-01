@@ -1,0 +1,233 @@
+/* Sidebar del carrito */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* El sidebar comienza oculto */
+    width: 300px;
+    height: 100%;
+    background-color: #ECF4F9;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    right: 0; /* Muestra el sidebar */
+}
+
+/* Contenido del sidebar */
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar h5 {
+    color: #264A80;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.linea-resumen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.texto-muted {
+    color: #6c757d;
+}
+
+.texto-negrita {
+    font-weight: 600;
+    color: #252129 !important;
+}
+
+/* Botón de pagar */
+.boton-pagar {
+    background-color: #D1B74D;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton-pagar:hover {
+    background-color: #7798C2;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Sidebar Enhancements */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -380px; /* Ajustado el ancho */
+    width: 380px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 15px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #dee2e6;
+    margin: 0;
+}
+
+.sidebar-header h5 {
+    margin: 0;
+    color: #264A80;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.boton-cerrar {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.boton-cerrar:hover {
+    color: #dc3545;
+}
+
+.carrito-servicios {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px 20px;
+}
+
+.carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #6c757d;
+}
+
+.carrito-footer {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.resumen-total {
+    margin-bottom: 15px;
+}
+
+.linea-servicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.linea-servicio-detalles {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.categoria-servicio {
+    display: block;
+    color: #6c757d;
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+}
+
+.nombre-servicio {
+    display: block;
+    font-size: 0.9rem;
+    color: #264A80;
+    margin-bottom: 2px;
+}
+
+.descripcion-servicio {
+    color: #6c757d;
+    font-size: 0.75rem;
+    margin-bottom: 0;
+}
+
+.acciones-servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.precio-servicio {
+    font-size: 0.9rem;
+    color: #264A80;
+    margin-bottom: 5px;
+}
+
+.linea-servicio .boton-eliminar {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.linea-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
