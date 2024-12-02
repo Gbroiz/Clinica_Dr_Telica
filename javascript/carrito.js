@@ -84,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     title: 'Carrito vacío',
                     text: 'No puedes proceder al pago si tu carrito está vacío.',
                     icon: 'warning',
-                    confirmButtonText: 'Entendido'
+                    confirmButtonText: 'Entendido',
+                    customClass: {
+                        confirmButton: 'swal2-confirm-btn' // Aplica la clase personalizada
+                    }
                 });
             } else {
                 window.location.href = 'pago.html';  // Proceder al pago si el carrito no está vacío
