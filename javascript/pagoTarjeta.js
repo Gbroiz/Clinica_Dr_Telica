@@ -1,3 +1,93 @@
+function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Obtener los valores del formulario
+    const customerName = document.getElementById('nombre').value.trim() || "Contado"; // Nombre del cliente (por defecto "Contado")
+    const customerID = document.getElementById('cedula').value.trim(); // Cédula
+    const customerEmail = document.getElementById('correo').value.trim(); // Correo electrónico
+    const customerPhone = document.getElementById('telefono').value.trim(); // Teléfono
+
+    // Generar el número de factura con fecha y hora
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+
+    const invoiceNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
+
+    doc.setFontSize(20);
+    doc.setTextColor(0, 0, 255); // Color azul
+    doc.setFont("helvetica", "bold"); // Fuente en negrita
+    doc.text("Factura de Compra", 105, 20, null, null, 'center'); // Centrado
+    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.setFont("helvetica", "normal"); // Fuente normal
+    doc.setFontSize(12);
+
+    // Número de factura
+    doc.text(`Factura Número: ${invoiceNumber}`, 105, 30, null, null, 'center'); // Centrado
+
+    // Datos del cliente
+    doc.text(`Nombre del Cliente: ${customerName}`, 14, 40); 
+    doc.text(`Cédula: ${customerID}`, 14, 45);
+    doc.text(`Correo electrónico: ${customerEmail}`, 14, 50);
+    doc.text(`Teléfono: ${customerPhone}`, 14, 55);
+
+    let y = 60; // Posición de inicio de la tabla de productos
+    let total = 0;
+
+    // Definir la tabla
+    const tableWidth = 180;
+    const rowHeight = 10;
+
+    // Cabecera de la tabla
+    doc.setFillColor(0, 123, 255); // Color azul para la cabecera
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la cabecera
+    doc.setTextColor(255, 255, 255); // Texto blanco
+    doc.text("Producto", 15, y + 7);
+    doc.text("Precio", 100, y + 7);
+    doc.setTextColor(0, 0, 0); // Restablecer color del texto a negro
+    y += rowHeight;
+
+    // Obtener los productos del carrito
+    const cart = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
+
+    cart.forEach(item => {
+        const subtotal = item.precio;
+        doc.rect(14, y, tableWidth, rowHeight); // Bordes de la fila
+        doc.text(item.nombre, 15, y + 7);
+        doc.text(`₡${formatPrice(item.precio)}`, 100, y + 7); // Formatear el precio
+        y += rowHeight; // Incremento de la posición
+        total += subtotal;
+    });
+
+    // Total
+    doc.setFillColor(211, 211, 211); // Color gris para la fila de total
+    doc.rect(14, y, tableWidth, rowHeight, 'F'); // Fondo de la fila
+    doc.setTextColor(0, 0, 0); // Texto negro
+    doc.text("Total:", 15, y + 7);
+    doc.text(`₡${formatPrice(total)}`, 150, y + 7); // Formatear el precio total
+
+    // Agregar número de página
+    const pageCount = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        doc.text(`Página ${i} de ${pageCount}`, 190, 285, null, null, 'right');
+    }
+
+    // Guardar el PDF
+    doc.save('factura_compra.pdf');
+}
+
+// Función para formatear el precio con separadores de miles y símbolo de colones
+function formatPrice(price) {
+    // Usamos toLocaleString() para agregar el separador de miles y formatear
+    return price.toLocaleString('es-CR'); // Formato en Costa Rica (para colones)
+}
 // Cargar los años desde el actual (por ejemplo, hasta 10 años en el futuro)
 const currentYear = new Date().getFullYear();
 const yearSelect = document.querySelector('.year-input');
@@ -159,7 +249,9 @@ document.querySelector('.submit-btn').addEventListener('click', function(event) 
             confirmButton: 'swal2-confirm-btn' // Aplica la clase personalizada
         }
     }).then(() => {
+        generatePDF();
         // Redirigir a la página de confirmación
         window.location.href = 'pagina_de_confirmacion.html'; // Redirige después de un pago exitoso
     });
+    
 });

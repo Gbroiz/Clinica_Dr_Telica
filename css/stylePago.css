@@ -188,3 +188,53 @@ body {
     width: 100%; /* Asegura que el botón de continuar ocupe el 100% del ancho */
     margin-bottom: 10px; /* Espacio entre los botones */
 }
+/* Espaciado entre el formulario y el nav (agregado margen superior al formulario) */
+.formulario-container {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 600px; /* Limitar el ancho del formulario */
+    margin: 50px auto 30px; /* Espaciado superior (50px) y centrado horizontal */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.formulario-container h3 {
+    text-align: center;
+    color: #264A80;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los campos del formulario */
+.inputBox {
+    margin-bottom: 15px;
+}
+
+.inputBox label {
+    font-size: 14px;
+    color: #333;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.inputBox input:focus {
+    outline: none;
+    
+}
+
+
+/* Media Queries para hacer el formulario más responsivo */
+@media (max-width: 768px) {
+    .formulario-container {
+        margin: 20px; /* Reducir margen en pantallas pequeñas */
+        width: 100%; /* Asegurar que el formulario ocupe el 100% del ancho en dispositivos pequeños */
+    }
+}
+

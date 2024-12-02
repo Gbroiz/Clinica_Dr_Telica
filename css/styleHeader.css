@@ -163,3 +163,25 @@ i {
 .navbar .d-flex.align-items-center.ms-3 {
     margin-right: 10px; /* Margen entre el carrito y el menú */
 }
+/* Estilos para la barra de navegación en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Aseguramos que el carrito esté antes que el menú hamburguesa */
+    .navbar .d-flex.d-lg-none {
+        order: -1; /* El carrito aparece primero */
+    }
+
+    .menu-btn {
+        order: 1; /* El menú hamburguesa aparece después del carrito */
+    }
+    
+    /* Agregar espacio entre el carrito y el menú hamburguesa */
+    .navbar .d-flex.align-items-center.ms-3 {
+        margin-right: 10px; /* Margen entre el carrito y el menú */
+    }
+}
