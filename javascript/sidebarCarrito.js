@@ -7,29 +7,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtotalCarrito = document.getElementById('subtotalCarrito');
     const totalCarrito = document.getElementById('totalCarrito');
     const cartBadge = document.querySelector('.badge');
-    const serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
+    
+    // Obtener los datos del carrito desde localStorage
+    let serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
 
-    // Actualizar badge del carrito
+    // Función para actualizar el badge del carrito
     function actualizarBadgeCarrito() {
-        if (cartBadge) {
-            cartBadge.textContent = serviciosEnCarrito.length;
-            cartBadge.classList.toggle('d-none', serviciosEnCarrito.length === 0);
+        const cantidadTotal = serviciosEnCarrito.length;
+
+        // Actualizar badge en pantallas pequeñas
+        const badgeResponsive = document.querySelector('.d-lg-none .badge');
+        if (badgeResponsive) {
+            if (cantidadTotal > 0) {
+                badgeResponsive.textContent = cantidadTotal;
+                badgeResponsive.classList.remove('d-none');
+            } else {
+                badgeResponsive.classList.add('d-none');
+            }
+        }
+
+        // Actualizar badge en pantallas grandes
+        const badgeDesktop = document.querySelector('.d-lg-flex .badge');
+        if (badgeDesktop) {
+            if (cantidadTotal > 0) {
+                badgeDesktop.textContent = cantidadTotal;
+                badgeDesktop.classList.remove('d-none');
+            } else {
+                badgeDesktop.classList.add('d-none');
+            }
         }
     }
-
-    // Toggle Sidebar
-    function toggleSidebar() {
-        carritoSidebar.classList.toggle('open');
-        sidebarOverlay.classList.toggle('show');
-        renderizarCarritoSidebar();
-    }
-
-    // Abrir sidebar
-    carritoLink.addEventListener('click', toggleSidebar);
-
-    // Cerrar sidebar
-    cerrarSidebar.addEventListener('click', toggleSidebar);
-    sidebarOverlay.addEventListener('click', toggleSidebar);
 
     // Función para renderizar el resumen del carrito
     function renderizarCarritoSidebar() {
@@ -70,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             subtotalCarrito.textContent = `₡${subtotal.toLocaleString()}`;
             totalCarrito.textContent = `₡${subtotal.toLocaleString()}`;
 
-            // Agregar listeners para botones de eliminar
+            // Agregar listeners para los botones de eliminar
             document.querySelectorAll('.boton-eliminar').forEach(boton => {
                 boton.addEventListener('click', (e) => {
                     const index = e.currentTarget.getAttribute('data-index');
@@ -79,22 +86,42 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Actualizar badge
+        // Actualizar el badge
         actualizarBadgeCarrito();
     }
 
-    // Función para eliminar un servicio
+    // Función para eliminar un servicio del carrito
     function eliminarServicio(index) {
-        serviciosEnCarrito.splice(index, 1);
-        localStorage.setItem('serviciosCarrito', JSON.stringify(serviciosEnCarrito));
+        serviciosEnCarrito.splice(index, 1); // Eliminar servicio
+        localStorage.setItem('serviciosCarrito', JSON.stringify(serviciosEnCarrito)); // Actualizar localStorage
+        renderizarCarritoSidebar(); // Re-renderizar carrito
+    }
+
+    // Toggle Sidebar
+    function toggleSidebar() {
+        carritoSidebar.classList.toggle('open');
+        sidebarOverlay.classList.toggle('show');
         renderizarCarritoSidebar();
     }
+
+    // Abrir sidebar
+    carritoLink.addEventListener('click', toggleSidebar);
+
+    // Cerrar sidebar
+    cerrarSidebar.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', toggleSidebar);
 
     // Redirección al pagar
     document.getElementById('pagar-btn').addEventListener('click', () => {
         window.location.href = 'carrito.html';
     });
 
-    // Renderizar inicialmente si hay servicios
+    // Renderizar el carrito inicialmente (al cargar la página)
     renderizarCarritoSidebar();
+
+    // Si hay algún servicio agregado, volver a renderizar el carrito
+    window.addEventListener('storage', () => {
+        serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
+        renderizarCarritoSidebar(); // Re-renderizar carrito en caso de cambios
+    });
 });

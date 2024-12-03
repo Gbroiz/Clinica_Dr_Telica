@@ -188,6 +188,7 @@ body {
     width: 100%; /* Asegura que el botón de continuar ocupe el 100% del ancho */
     margin-bottom: 10px; /* Espacio entre los botones */
 }
+
 /* Espaciado entre el formulario y el nav (agregado margen superior al formulario) */
 .formulario-container {
     background-color: #fff;
@@ -200,8 +201,19 @@ body {
 
 /* Título del formulario */
 .formulario-container h3 {
-    text-align: center;
+    font-size: 30px;
     color: #264A80;
+    margin: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.formulario-container hr{
+    border: 1px solid #D1B74D;
+    opacity: 1;
+    width: 65px;
+    margin: 0 auto; 
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 
@@ -211,8 +223,9 @@ body {
 }
 
 .inputBox label {
-    font-size: 14px;
-    color: #333;
+    display: block;
+    color:#999999cb;
+    padding-bottom: 5px;
 }
 
 .inputBox input {

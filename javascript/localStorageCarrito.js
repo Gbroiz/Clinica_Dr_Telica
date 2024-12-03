@@ -84,13 +84,27 @@ function actualizarContadorCarrito() {
     const serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
     const cantidadTotal = serviciosEnCarrito.length;
     
-    const badge = document.querySelector('.badge');
-    if (badge) {
+    // Seleccionar badges específicamente
+    const badgeResponsive = document.querySelector('.d-lg-none .badge');
+    const badgeDesktop = document.querySelector('.d-lg-flex .badge');
+
+    // Actualizar badge en pantallas pequeñas
+    if (badgeResponsive) {
         if (cantidadTotal > 0) {
-            badge.textContent = cantidadTotal;
-            badge.classList.remove('d-none');
+            badgeResponsive.textContent = cantidadTotal;
+            badgeResponsive.classList.remove('d-none');
         } else {
-            badge.classList.add('d-none');
+            badgeResponsive.classList.add('d-none');
+        }
+    }
+
+    // Actualizar badge en pantallas grandes
+    if (badgeDesktop) {
+        if (cantidadTotal > 0) {
+            badgeDesktop.textContent = cantidadTotal;
+            badgeDesktop.classList.remove('d-none');
+        } else {
+            badgeDesktop.classList.add('d-none');
         }
     }
 }
