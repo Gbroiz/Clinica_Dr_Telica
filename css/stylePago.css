@@ -55,10 +55,11 @@ body {
 .container form .flexbox{
     display: flex;
     gap:15px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples filas */
 }
 
 .container form .flexbox .inputBox{
-    flex:1 1 150px;
+    flex: 1 1 calc(50% - 15px); /* Ajusta el ancho al 50% menos el espacio del gap */
 }
 
 .container form .submit-btn{
@@ -78,6 +79,78 @@ body {
 .container form .submit-btn:hover{
     letter-spacing: 2px;
     opacity: .8;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-pago {
+        padding: 15px;
+    }
+
+    .formulario-container {
+        max-width: 100%;
+        padding: 15px;
+        
+    }
+
+    .container form .flexbox .inputBox {
+        flex: 1 1 100%; /* Los campos ocupan todo el ancho */
+    }
+
+    /* Se ajusta el margen superior de la tarjeta para que no tape los campos */
+    .card-container {
+        width: 100%;
+        margin-bottom: 30px; /* Espacio debajo de la tarjeta */
+        position: relative;
+        z-index: 1; /* Asegura que la tarjeta esté por encima del formulario */
+        margin-top: -80px; /* Ajustamos la posición superior de la tarjeta */
+    }
+
+    /* Se ajusta el formulario para que tenga suficiente espacio en la parte superior */
+    .container form {
+        padding: 140px 10px 20px; /* Añadimos suficiente padding arriba para que no tape el campo */
+        width: 100%;
+        position: relative;
+        
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Los elementos se apilan en orden vertical */
+        align-items: center; /* Alineamos todo al centro */
+    }
+
+    .container .card-container .front, 
+    .container .card-container .back {
+        position: relative; /* Relativo para que no se salga del flujo */
+        margin: 0 auto; /* Centramos la tarjeta */
+        
+    }
+
+    .container .card-container {
+        max-width: 400px;
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .formulario-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px; /* Reduce el padding general */
+    }
+
+    .container form {
+        padding: 20px 10px; /* Ajusta el padding del formulario */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .flexbox .inputBox {
+        flex: 1 1 100%; /* Campos en una sola fila */
+    }
 }
 
 .container .card-container{
@@ -243,11 +316,4 @@ body {
 }
 
 
-/* Media Queries para hacer el formulario más responsivo */
-@media (max-width: 768px) {
-    .formulario-container {
-        margin: 20px; /* Reducir margen en pantallas pequeñas */
-        width: 100%; /* Asegurar que el formulario ocupe el 100% del ancho en dispositivos pequeños */
-    }
-}
 
