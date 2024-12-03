@@ -1,3 +1,4 @@
+
 function guardarServicioEnCarrito(servicio) {
     let serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
     
@@ -78,6 +79,10 @@ function guardarServicioEnCarrito(servicio) {
             window.location.href = "carrito.html";
         }
     });
+
+     // Disparar evento personalizado
+     const carritoActualizadoEvent = new CustomEvent('carritoActualizado');
+     document.dispatchEvent(carritoActualizadoEvent);
 }
 
 function actualizarContadorCarrito() {

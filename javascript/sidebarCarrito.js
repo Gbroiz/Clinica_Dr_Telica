@@ -124,4 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
         serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
         renderizarCarritoSidebar(); // Re-renderizar carrito en caso de cambios
     });
+
+    document.addEventListener('carritoActualizado', () => {
+        serviciosEnCarrito = JSON.parse(localStorage.getItem('serviciosCarrito')) || [];
+        renderizarCarritoSidebar();
+    });
 });
