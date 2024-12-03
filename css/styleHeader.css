@@ -39,7 +39,7 @@ header {
 
 /* Estilos para el menú desplegable (Dropdown) */
 .dropdown-menu {
-    background-color: #e9eaeb; /* Fondo oscuro (igual al menú hamburguesa) */
+    background-color: #e9eaeb !important;  /* Fondo oscuro (igual al menú hamburguesa) */
     border: none; /* Eliminar borde */
     border-radius: 5px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
