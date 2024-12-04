@@ -21,15 +21,15 @@ function validateEmail(email) {
 }
 
 // Real-time input validations
-document.getElementById('nombre').addEventListener('input', function() {
+document.getElementById('nombre').addEventListener('input', function () {
     this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/g, '');
 });
 
-document.getElementById('cedula').addEventListener('input', function() {
+document.getElementById('cedula').addEventListener('input', function () {
     this.value = this.value.replace(/\D/g, '');
 });
 
-document.getElementById('telefono').addEventListener('input', function() {
+document.getElementById('telefono').addEventListener('input', function () {
     this.value = this.value.replace(/\D/g, '');
 });
 
@@ -53,7 +53,7 @@ document.querySelector('.card-number-input').oninput = () => {
 };
 
 // Validación del número de tarjeta
-document.querySelector('.card-number-input').addEventListener('input', function() {
+document.querySelector('.card-number-input').addEventListener('input', function () {
     const cardNumber = document.querySelector('.card-number-input').value.replace(/\D/g, '');
 
     if (cardNumber.length < 13 || cardNumber.length > 16) {
@@ -61,24 +61,24 @@ document.querySelector('.card-number-input').addEventListener('input', function(
     }
 
     fetch(`https://data.handyapi.com/bin/${cardNumber.substring(0, 6)}`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.Status === "SUCCESS") {
-            if (data.Scheme === "VISA") {
-                document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/visa.png';
-            } else if (data.Scheme === "MASTERCARD") {
-                document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/master.png';
+        .then(response => response.json())
+        .then(data => {
+            if (data.Status === "SUCCESS") {
+                if (data.Scheme === "VISA") {
+                    document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/visa.png';
+                } else if (data.Scheme === "MASTERCARD") {
+                    document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/master.png';
+                } else {
+                    document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/nothing.png';
+                }
             } else {
                 document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/nothing.png';
             }
-        } else {
+        })
+        .catch(error => {
+            console.error('Error de API:', error);
             document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/nothing.png';
-        }
-    })
-    .catch(error => {
-        console.error('Error de API:', error);
-        document.querySelector('.tipo_tarjeta').src = 'img/Tarjeta/nothing.png';
-    });
+        });
 });
 
 // Validación del titular de la tarjeta
@@ -198,8 +198,8 @@ function generatePDF() {
 }
 
 
-// Verificar que la tarjeta no esté vencida
-document.querySelector('.submit-btn').addEventListener('click', function(event) {
+// Verificar que la tarjeta no esté vencida y que todos los campos sean válidos
+document.querySelector('.submit-btn').addEventListener('click', function (event) {
     event.preventDefault();
 
     // Validación de información personal
@@ -315,11 +315,37 @@ document.querySelector('.submit-btn').addEventListener('click', function(event) 
 
     // Validación de detalles de tarjeta
     const cardNumber = document.querySelector('.card-number-input').value.replace(/\D/g, '');
+    const cardHolder = document.querySelector('.card-holder-input').value.trim();
     const expMonth = document.querySelector('.month-input').value;
     const expYear = document.querySelector('.year-input').value;
     const cvv = document.querySelector('.cvv-input').value;
 
-    // Validaciones de tarjeta
+    // Validación de titular de tarjeta (sin cambios)
+    if (!cardHolder) {
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor, ingrese el nombre del titular de la tarjeta.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+                confirmButton: 'swal2-confirm-btn'
+            }
+        });
+        return;
+    }
+
+    if (expMonth === "month" || expYear === "year") {
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor, seleccione el mes y año de expiración de la tarjeta.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+                confirmButton: 'swal2-confirm-btn'
+            }
+        });
+        return;
+    }
     if (!cardNumber.match(/^\d{13,16}$/)) {
         Swal.fire({
             title: 'Error',
@@ -333,10 +359,23 @@ document.querySelector('.submit-btn').addEventListener('click', function(event) 
         return;
     }
 
-    if (!expMonth || !expYear) {
+    if (!expMonth || expMonth < 1 || expMonth > 12) {
         Swal.fire({
             title: 'Error',
-            text: 'Por favor, ingresa una fecha de expiración válida.',
+            text: 'Por favor, ingresa un mes de expiración válido (1-12).',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+                confirmButton: 'swal2-confirm-btn'
+            }
+        });
+        return;
+    }
+
+    if (!expYear || expYear < new Date().getFullYear()) {
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor, ingresa un año de expiración válido.',
             icon: 'error',
             confirmButtonText: 'OK',
             customClass: {
@@ -371,7 +410,7 @@ document.querySelector('.submit-btn').addEventListener('click', function(event) 
             icon: 'error',
             confirmButtonText: 'OK',
             customClass: {
-                confirmButton: 'swal2-confirm-btn' // Aplica la clase personalizada
+                confirmButton: 'swal2-confirm-btn'
             }
         });
         return;
@@ -384,12 +423,11 @@ document.querySelector('.submit-btn').addEventListener('click', function(event) 
         icon: 'success',
         confirmButtonText: 'Descargar factura',
         customClass: {
-            confirmButton: 'swal2-confirm-btn' // Aplica la clase personalizada
+            confirmButton: 'swal2-confirm-btn'
         }
     }).then(() => {
         generatePDF();
         localStorage.clear();
         window.location.href = 'index.html'; // Redirige después de un pago exitoso
     });
-    
 });
